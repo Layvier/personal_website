@@ -1,5 +1,7 @@
-import * as React from "react"
+import { ChakraProvider } from '@chakra-ui/react';
+import * as React from 'react';
+import { theme } from './theme';
 
 export const Wrapper: React.FC<{}> = ({ children }) => {
-  return <div>{children}</div>
-}
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+};
