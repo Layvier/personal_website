@@ -8,6 +8,9 @@
     "@chakra-ui/react": "^1.6.2",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/bebas-neue": "^4.4.0",
+    "@fontsource/raleway": "^4.4.0",
+    "@fontsource/spartan": "^4.4.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.4.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
@@ -21,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-tsparticles": "^1.27.0"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",
