@@ -9,7 +9,6 @@ import { Center, Flex } from '@chakra-ui/layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import '../main.css';
-// import "./layout.css"
 
 export const Layout: React.FC<{}> = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,16 +22,22 @@ export const Layout: React.FC<{}> = ({ children }) => {
   `);
 
   return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-      <Flex direction="column" minH="100vh">
-        <Flex as="main" flexGrow={1} direction="column">
-          {children}
-        </Flex>
-        <Center as="footer" justifySelf="center">
-          © {new Date().getFullYear()} Olivier Ramier
-        </Center>
+    <Flex direction="column" minH="100vh">
+      <Flex as="main" flexGrow={1} direction="column">
+        {children}
       </Flex>
-    </>
+      <Center
+        as="footer"
+        justifySelf="center"
+        py={4}
+        bgColor="gray.900"
+        color="gray.150"
+        fontWeight={800}
+        fontSize="lg"
+        letterSpacing={1}
+      >
+        © {new Date().getFullYear()} Olivier Ramier
+      </Center>
+    </Flex>
   );
 };
