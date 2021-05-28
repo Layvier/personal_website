@@ -1,7 +1,9 @@
 import { extendTheme } from '@chakra-ui/react';
 import '@fontsource/spartan/400.css';
-import '@fontsource/bebas-neue/400.css';
-import '@fontsource/raleway/400.css';
+import '@fontsource/spartan/600.css';
+import '@fontsource/spartan/800.css';
+import '@fontsource/raleway/600.css';
+import '@fontsource/raleway/800.css';
 
 export const fonts = {
   bebasNeue: 'Bebas Neue',
