@@ -1,4 +1,4 @@
-import { Flex, Heading, Link, Stack } from '@chakra-ui/layout';
+import { Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/layout';
 import * as React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Layout } from '../components/layout';
@@ -48,7 +48,13 @@ const IndexPage = () => {
             Olivier Ramier
           </Heading>
         </Section>
-        <Section sectionId="section2" h="800px" bgColor="gray.400"></Section>
+        <Section sectionId="section2" h="800px" bgColor="gray.100">
+          <Center h="100%">
+            <Text fontSize="xl">
+              Freelance <Underlined>software</Underlined> engineer
+            </Text>
+          </Center>
+        </Section>
         <SkillsSection />
       </Flex>
     </Layout>
@@ -75,5 +81,15 @@ const SectionLink: React.FC<{ sectionId: SectionIds; onScrollActive?: (sectionId
         {children}
       </ScrollLink>
     </Link>
+  );
+};
+
+const Underlined: React.FC<{}> = ({ children }) => {
+  return (
+    <Text as="span" position="relative" zIndex={1}>
+      <Text as="span" position="relative" zIndex={2} className="underlined">
+        {children}
+      </Text>
+    </Text>
   );
 };

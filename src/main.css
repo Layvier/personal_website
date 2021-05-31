@@ -1,3 +1,16 @@
 .active_section_link {
   font-weight: 800;
 }
+
+.underlined::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 3px;
+  opacity: 0.6;
+  height: 86%;
+  width: 100%;
+  background: #dac6b5ff;
+  z-index: -1;
+}
