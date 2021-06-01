@@ -142,7 +142,7 @@ export const SkillsSection: React.FC<{}> = () => {
         <Box maxW="800px" mt={20} mb={20}>
           <Wrap spacing="10px" justify="center" align="center">
             {skills.map(skill => (
-              <WrapItem>
+              <WrapItem key={skill.name}>
                 <SkillTag skill={skill} />
               </WrapItem>
             ))}
@@ -150,7 +150,7 @@ export const SkillsSection: React.FC<{}> = () => {
         </Box>
       </Center>
       <Center w="100%" mb={20}>
-        <Heading size="3xl" fontWeight={800} stroke="1px" color="white" WebkitTextStroke="5px black">
+        <Heading size="3xl" fontWeight={800} stroke="1px" color="white">
           Skills
         </Heading>
       </Center>
