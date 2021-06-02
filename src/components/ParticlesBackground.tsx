@@ -1,5 +1,6 @@
 import Particles from 'react-tsparticles';
 import { theme } from '../theme';
+import * as React from 'react';
 
 export const ParticlesBackground: React.FC<{}> = () => {
   return (

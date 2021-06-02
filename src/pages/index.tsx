@@ -1,9 +1,9 @@
-import { Flex, Link, Stack } from '@chakra-ui/layout';
+import { Flex, Stack } from '@chakra-ui/layout';
 import * as React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { Layout } from '../components/layout';
 import { AboutMeSection } from '../components/sections/AboutMeSection';
 import { ProjectsSection } from '../components/sections/ProjectsSection';
+import { SectionLink } from '../components/sections/SectionLink';
 import { SkillsSection } from '../components/sections/SkillsSection';
 import { WorkExperienceSection } from '../components/sections/WorkExperienceSection';
 import { Seo } from '../components/seo';
@@ -58,22 +58,3 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
-
-const SectionLink: React.FC<{ sectionId: SectionIds; onScrollActive?: (sectionId: SectionIds) => void }> = ({
-  sectionId,
-  onScrollActive,
-  children,
-}) => {
-  return (
-    <ScrollLink
-      onSetActive={() => onScrollActive && onScrollActive(sectionId)}
-      activeClass="active_section_link"
-      to={sectionId}
-      spy={true}
-      smooth={true}
-      duration={1000}
-    >
-      <Link as="span">{children}</Link>
-    </ScrollLink>
-  );
-};

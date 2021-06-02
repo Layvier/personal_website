@@ -6,7 +6,7 @@ import { Section } from './Section';
 export const ProjectsSection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.projects} bgColor="gray.50" py={10}>
-      <Flex mx={20}>
+      <Flex>
         <Stack spacing={5}>
           <Heading color="teal.500">Sci-Map.org - The entry point to learn anything</Heading>
           <Text>
@@ -24,7 +24,14 @@ export const ProjectsSection: React.FC<{}> = () => {
             {/* Mission */}
           </Text>
 
-          <Text fontWeight={600}>Tech stack: Neo4j, Node.js/TypeScript, React, Apollo, Chakra UI</Text>
+          <Text>
+            <Text fontWeight={800} as="span">
+              Tech stack:
+            </Text>{' '}
+            <Text fontStyle="italic" color="gray.700" as="span">
+              Node.js, TypeScript, Neo4j, React, Apollo Cient/Server, Chakra UI
+            </Text>
+          </Text>
           <Link href="https://github.com/sci-map-org/" color="baby-blue-eyes">
             Github
           </Link>
