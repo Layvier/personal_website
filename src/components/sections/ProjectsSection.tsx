@@ -44,7 +44,7 @@ export const ProjectsSection: React.FC<{}> = () => {
                   materials.
                 </Text>
               </Center>
-              <Stack direction="row" spacing={5}>
+              <Stack direction={{ base: 'column', lg: 'row' }} spacing={5}>
                 <Box flexGrow={1}>
                   <Text>
                     Having learned a lot online, in a self directed way, I always thought that something was missing to
@@ -95,7 +95,7 @@ export const ProjectsSection: React.FC<{}> = () => {
         <Project
           title={<Heading color="almond">Ant Colony Optimization algorithm</Heading>}
           content={
-            <Stack spacing={5} direction="row">
+            <Stack spacing={5} direction={{ base: 'column', lg: 'row' }}>
               <Box flexGrow={1}>
                 <Text>
                   “Ant colony” is a fascinating optimization algorithm inspired by how ants find the shortest path
@@ -151,7 +151,7 @@ const Project: React.FC<{ title: React.ReactNode; content: React.ReactNode }> = 
   return (
     <Flex direction="column">
       <Flex mb={4}>{title}</Flex>
-      <Flex ml={32} mr={10}>
+      <Flex ml={{ base: 10, sm: 12, md: 16, lg: 32 }} mr={10}>
         {content}
       </Flex>
     </Flex>

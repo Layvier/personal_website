@@ -23,6 +23,7 @@ const IndexPage = () => {
       <Flex alignItems="stretch" direction="column" position="relative">
         <Flex
           position="fixed"
+          display={{ base: 'none', lg: 'initial' }}
           top={2}
           right={2}
           pt={2}

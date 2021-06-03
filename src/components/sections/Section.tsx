@@ -8,7 +8,7 @@ export const Section: React.FC<{ sectionId: string } & FlexProps> = ({
   ...flexProps
 }) => {
   return (
-    <Flex minH="100vh" id={sectionId} {...flexProps} direction="column" alignItems="stretch" px={32}>
+    <Flex minH="100vh" id={sectionId} {...flexProps} direction="column" alignItems="stretch" px={{ base: 4, lg: 32 }}>
       {children}
     </Flex>
   );

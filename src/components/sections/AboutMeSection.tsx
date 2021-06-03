@@ -50,7 +50,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Box>
         </Flex>
       </Flex>
-      <Flex py={20} direction="row">
+      <Flex py={20} direction={{ base: 'column', lg: 'row' }}>
         <Heading mr={3} fontWeight={500}>
           About Me
         </Heading>
@@ -80,7 +80,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Text>
         </Stack>
 
-        <Flex px={10}>
+        <Center py={{ base: 10, lg: 0 }} px={10}>
           <Box position="relative" boxSize="330px">
             <Flex
               boxSize="300px"
@@ -126,7 +126,7 @@ export const AboutMeSection: React.FC<{}> = () => {
               zIndex={3}
             ></Box>
           </Box>
-        </Flex>
+        </Center>
       </Flex>
     </Section>
   );

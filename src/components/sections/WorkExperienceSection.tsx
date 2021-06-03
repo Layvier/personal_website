@@ -51,7 +51,7 @@ const workExperiences: WorkExperience[] = [
 ];
 export const WorkExperienceSection: React.FC<{}> = () => {
   return (
-    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={24} pb={16} position="relative">
+    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={24} pb={16}>
       <Stack spacing={16} zIndex={2}>
         {workExperiences.map(workExperience => (
           <WorkExperienceBlock workExperience={workExperience} />
@@ -69,14 +69,19 @@ export const WorkExperienceSection: React.FC<{}> = () => {
 
 const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({ workExperience }) => {
   return (
-    <Flex direction="row" alignItems="stretch">
-      <Flex minW="300px" maxW="300px" direction="column" alignItems="flex-end">
-        <Heading textAlign="right" color="white">
+    <Flex direction={{ base: 'column', lg: 'row' }} alignItems="stretch">
+      <Flex
+        minW={{ lg: '300px' }}
+        maxW={{ lg: '300px' }}
+        direction="column"
+        alignItems={{ base: 'center', lg: 'flex-end' }}
+      >
+        <Heading textAlign={{ base: 'center', lg: 'right' }} color="white">
           {workExperience.companyName}
         </Heading>
       </Flex>
       <Stack pl={4} flexGrow={1} pr={5} mt={1}>
-        <Text color="white" fontWeight={600}>
+        <Text color="white" fontWeight={600} textAlign={{ base: 'center', lg: 'left' }}>
           {workExperience.description}
         </Text>
         <UnorderedList spacing={1} fontSize="xs" stylePosition="inside">
@@ -85,14 +90,14 @@ const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({ wor
           ))}
         </UnorderedList>
       </Stack>
-      <Flex w="200px" justifyContent="flex-end" alignItems="center">
-        <Text color="white" fontWeight={600} textAlign="center">
-          {workExperience.dates[0]}
-          <br />
-          -
-          <br />
-          {workExperience.dates[1]}
-        </Text>
+      <Flex w={{ lg: '200px' }} justifyContent="flex-end" alignItems="center">
+        <Stack direction={{ base: 'row', lg: 'column' }} color="white" fontWeight={600} textAlign="center">
+          <Text>{workExperience.dates[0]}</Text>
+          {/* <br /> */}
+          <Text>-</Text>
+          {/* <br /> */}
+          <Text>{workExperience.dates[1]}</Text>
+        </Stack>
       </Flex>
     </Flex>
   );
