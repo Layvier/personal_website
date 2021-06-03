@@ -14,3 +14,8 @@
   background: #dac6b5ff;
   z-index: -1;
 }
+
+#tsparticles {
+  /* height: 400px; */
+  z-index: 0;
+}

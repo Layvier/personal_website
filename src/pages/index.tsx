@@ -31,7 +31,7 @@ const IndexPage = () => {
           pb={2}
           color={[SectionIds.section3, SectionIds.section2].includes(activeSection) ? 'gray.150' : 'gray.850'}
           transition="color 200ms"
-          minW="96px"
+          minW="106px"
         >
           <Stack spacing={1}>
             <SectionLink sectionId={SectionIds.section1} onScrollActive={sectionId => setActiveSection(sectionId)}>
@@ -41,7 +41,7 @@ const IndexPage = () => {
               Projects
             </SectionLink>
             <SectionLink sectionId={SectionIds.section2} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              Work Exp
+              Previously
             </SectionLink>
             <SectionLink sectionId={SectionIds.section3} onScrollActive={sectionId => setActiveSection(sectionId)}>
               Skills
