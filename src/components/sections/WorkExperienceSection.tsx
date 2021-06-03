@@ -15,7 +15,7 @@ const workExperiences: WorkExperience[] = [
   {
     companyName: 'Entrepreneur First',
     jobTitle: 'Cohort Member',
-    description: 'Joined one of most selective entrepreneurship program in the world',
+    description: "Joined Entrepreneur First Berlin's 5th cohort",
     bulletPoints: [
       'Formed several teams following Entrepreneur First’s cofounder matching framework',
       'Went through ideation, market research and customer development phases',
@@ -51,17 +51,17 @@ const workExperiences: WorkExperience[] = [
 ];
 export const WorkExperienceSection: React.FC<{}> = () => {
   return (
-    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={24} pb={16}>
-      <Stack spacing={16}>
+    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={24} pb={16} position="relative">
+      <Stack spacing={16} zIndex={2}>
         {workExperiences.map(workExperience => (
           <WorkExperienceBlock workExperience={workExperience} />
         ))}
       </Stack>
       <Flex pt={20} direction="column">
-        <Heading color="gray.250" fontWeight={300} fontSize="7xl">
+        <Heading color="gray.200" fontWeight={300} fontSize="7xl">
           Previously
         </Heading>
-        <Divider borderWidth={2} borderColor="gray.200" mt={2} />
+        <Divider borderWidth={2} borderColor="gray.200" opacity={1} mt={2} />
       </Flex>
     </Section>
   );

@@ -9,12 +9,13 @@ export const ParticlesBackground: React.FC<{}> = () => {
       width="400px"
       height="400px"
       options={{
-        fpsLimit: 60,
+        fpsLimit: 30,
+
         background: {
-          color: theme.colors.gray[950],
+          color: 'transparent', //theme.colors.gray[950],
         },
         backgroundMode: {
-          enable: true,
+          enable: false,
         },
         particles: {
           color: {
@@ -28,7 +29,7 @@ export const ParticlesBackground: React.FC<{}> = () => {
           },
           move: {
             enable: true,
-            speed: 0.5,
+            speed: 0.4,
           },
           size: {
             value: 3,
