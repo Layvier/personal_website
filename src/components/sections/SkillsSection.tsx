@@ -138,8 +138,13 @@ const skills: Skill[] = [
 export const SkillsSection: React.FC<{}> = () => {
   return (
     <Section sectionId="section3" minH="100vh" bgColor="onyx">
+      <Center mt={20}>
+        <Heading fontSize="7xl" fontWeight={800} color="white">
+          Skills
+        </Heading>
+      </Center>
       <Center>
-        <Box maxW="800px" mt={20} mb={20}>
+        <Box maxW="850px" mt={12} mb={20}>
           <Wrap spacing="10px" justify="center" align="center">
             {skills.map(skill => (
               <WrapItem key={skill.name}>
@@ -148,11 +153,6 @@ export const SkillsSection: React.FC<{}> = () => {
             ))}
           </Wrap>
         </Box>
-      </Center>
-      <Center w="100%" mb={20}>
-        <Heading size="3xl" fontWeight={800} stroke="1px" color="white">
-          Skills
-        </Heading>
       </Center>
     </Section>
   );

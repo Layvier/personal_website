@@ -2,6 +2,7 @@ import { Flex, Stack } from '@chakra-ui/layout';
 import * as React from 'react';
 import { Layout } from '../components/layout';
 import { AboutMeSection } from '../components/sections/AboutMeSection';
+import { ContactSection } from '../components/sections/ContactSection';
 import { ProjectsSection } from '../components/sections/ProjectsSection';
 import { SectionLink } from '../components/sections/SectionLink';
 import { SkillsSection } from '../components/sections/SkillsSection';
@@ -13,6 +14,7 @@ export enum SectionIds {
   'section2' = 'section2',
   'section3' = 'section3',
   projects = 'projects',
+  contact = 'contact',
 }
 const IndexPage = () => {
   const [activeSection, setActiveSection] = React.useState<SectionIds>(SectionIds.section1);
@@ -53,6 +55,7 @@ const IndexPage = () => {
         <ProjectsSection />
         <WorkExperienceSection />
         <SkillsSection />
+        <ContactSection />
       </Flex>
     </Layout>
   );

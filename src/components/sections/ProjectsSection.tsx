@@ -1,4 +1,4 @@
-import { ArrowForwardIcon, ExternalLinkIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { ArrowForwardIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
 import { Box, Center, Flex, Heading, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/layout';
 import * as React from 'react';
@@ -13,7 +13,7 @@ export const ProjectsSection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.projects} bgColor="gray.50" py={10}>
       <Flex direction="row-reverse" py={4}>
-        <Heading size="3xl" fontWeight={800} color="onyx" textDecor="underline">
+        <Heading fontSize="7xl" fontWeight={800} color="onyx" textDecor="underline">
           Projects
         </Heading>
       </Flex>
@@ -103,8 +103,12 @@ export const ProjectsSection: React.FC<{}> = () => {
                 </Text>
                 <Text mt={2}>
                   I decided to leverage Elixir’s actor model to simulate ants in their own processes and solve the
-                  famous Traveling Salesman Problem. This approach makes the algorithm extremely scalable as it is then
-                  able to run on thousands of processors at the same time.
+                  famous{' '}
+                  <Link href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">
+                    Travelling Salesman Problem (TSP)
+                  </Link>
+                  . This approach makes the algorithm extremely scalable as it is then able to run on thousands of
+                  processors at the same time.
                 </Text>
               </Box>
               <Box minW="40%">

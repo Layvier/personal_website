@@ -22,22 +22,8 @@ export const Layout: React.FC<{}> = ({ children }) => {
   `);
 
   return (
-    <Flex direction="column" minH="100vh">
-      <Flex as="main" flexGrow={1} direction="column">
-        {children}
-      </Flex>
-      <Center
-        as="footer"
-        justifySelf="center"
-        py={4}
-        bgColor="gray.900"
-        color="gray.150"
-        fontWeight={800}
-        fontSize="lg"
-        letterSpacing={1}
-      >
-        © {new Date().getFullYear()} Olivier Ramier
-      </Center>
+    <Flex as="main" flexGrow={1} direction="column">
+      {children}
     </Flex>
   );
 };

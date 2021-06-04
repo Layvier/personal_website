@@ -21,16 +21,16 @@ export const AboutMeSection: React.FC<{}> = () => {
         </Flex>
 
         <Flex direction="column" py={20} fontFamily={fonts.spartan}>
-          <Text fontSize="xl" mb={8} overflow="clip">
+          <Text mb={8} overflow="clip">
             I'm a french <Underlined>software engineer</Underlined> living in Berlin, passionate about the web,
             technology and learning.
           </Text>
           <Box>
-            <Text fontSize="2xl" fontWeight={800} color="gray.750" fontStyle="underlined" mb={3}>
+            <Text fontWeight={800} color="gray.750" fontStyle="underlined" mb={3}>
               My jam:
             </Text>
-            <Text fontSize="xl" ml={6}>
-              {'=> '}Building stuff (checkout{' '}
+            <Text ml={6}>
+              Building stuff (checkout{' '}
               <ScrollLink
                 activeClass="active_section_link"
                 to={SectionIds.projects}
@@ -44,13 +44,11 @@ export const AboutMeSection: React.FC<{}> = () => {
               </ScrollLink>
               )
             </Text>
-            <Text fontSize="xl" ml={6}>
-              {'=> '}Freelance services in software development and consulting.
-            </Text>
+            <Text ml={6}>Freelance services in software development and consulting.</Text>
           </Box>
         </Flex>
       </Flex>
-      <Flex py={20} direction={{ base: 'column', lg: 'row' }}>
+      <Flex pb={20} direction={{ base: 'column', lg: 'row' }}>
         <Heading mr={3} fontWeight={500}>
           About Me
         </Heading>
@@ -70,8 +68,6 @@ export const AboutMeSection: React.FC<{}> = () => {
             In 2020 I started my self-employed journey and I now alternate between working on personal projects and
             freelancing.
           </Text>
-          {/* Through these personal projects I aim to improve my skills across all the
-          phases of the product development process, such as UI/UX design or growth. */}
 
           <Text>
             As a <Underlined fontWeight={600}>tech generalist</Underlined> and pragmatic{' '}

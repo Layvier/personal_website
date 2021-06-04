@@ -46,23 +46,35 @@ const workExperiences: WorkExperience[] = [
       "Designed, implemented and maintained the company's public API",
       'Designed and implemented development tooling for API testing',
     ],
-    dates: ['Nov 2017', 'Jan 2018'],
+    dates: ['Nov 2016', 'Jan 2018'],
+  },
+  {
+    companyName: 'PersEE',
+    jobTitle: 'Optimization Developer',
+    description:
+      'Optimization development (applied mathematics) in a start-up providing decision-support tools for hydrogen usage as a green energy vector',
+    bulletPoints: [
+      "Designed, implemented and maintained the company's public API",
+      'Designed, implemented, and maintained a model reducing the investment cost of a hydrogen supply chain up to 25%',
+      'Designed and implemented a Python service for real time hydrogen distribution optimization under uncertainty. Reduced operating costs by 10% and risks of shortages by 5%',
+    ],
+    dates: ['Mar 2016', 'Nov 2016'],
   },
 ];
 export const WorkExperienceSection: React.FC<{}> = () => {
   return (
-    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={24} pb={16}>
+    <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={20} pb={32}>
+      <Flex direction="column" pb={20}>
+        <Heading color="gray.150" fontWeight={400} fontSize="7xl">
+          Previously
+        </Heading>
+        <Divider borderWidth={2} borderColor="gray.150" opacity={1} mt={2} />
+      </Flex>
       <Stack spacing={16} zIndex={2}>
         {workExperiences.map(workExperience => (
           <WorkExperienceBlock workExperience={workExperience} />
         ))}
       </Stack>
-      <Flex pt={20} direction="column">
-        <Heading color="gray.200" fontWeight={300} fontSize="7xl">
-          Previously
-        </Heading>
-        <Divider borderWidth={2} borderColor="gray.200" opacity={1} mt={2} />
-      </Flex>
     </Section>
   );
 };
@@ -91,7 +103,7 @@ const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({ wor
         </UnorderedList>
       </Stack>
       <Flex w={{ lg: '200px' }} justifyContent="flex-end" alignItems="center">
-        <Stack direction={{ base: 'row', lg: 'column' }} color="white" fontWeight={600} textAlign="center">
+        <Stack direction={{ base: 'row', lg: 'column' }} color="almond" fontWeight={600} textAlign="center">
           <Text>{workExperience.dates[0]}</Text>
           {/* <br /> */}
           <Text>-</Text>
