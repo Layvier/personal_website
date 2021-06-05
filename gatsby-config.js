@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Olivier Ramier | Freelance Software Engineer`,
+    description: `
+    This the personal website of Olivier Ramier. I'm a freelance french software engineer living in Berlin, passionate about the web, technology and learning. I provide full-stack software development in TypeScript, React.js, Node.js, GraphQl`,
+    author: `@olivier_ramier`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -20,7 +20,7 @@ const IndexPage = () => {
   const [activeSection, setActiveSection] = React.useState<SectionIds>(SectionIds.section1);
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Olivier Ramier" />
 
       <Flex alignItems="stretch" direction="column" position="relative">
         <Flex

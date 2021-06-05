@@ -104,7 +104,7 @@ export const ProjectsSection: React.FC<{}> = () => {
                 <Text mt={2}>
                   I decided to leverage Elixir’s actor model to simulate ants in their own processes and solve the
                   famous{' '}
-                  <Link href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">
+                  <Link href="https://en.wikipedia.org/wiki/Travelling_salesman_problem" fontWeight={600}>
                     Travelling Salesman Problem (TSP)
                   </Link>
                   . This approach makes the algorithm extremely scalable as it is then able to run on thousands of

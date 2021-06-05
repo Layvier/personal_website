@@ -8,47 +8,48 @@ import { Section } from './Section';
 
 export const AboutMeSection: React.FC<{}> = () => {
   return (
-    <Section sectionId="section1" bgColor="gray.100" minH="200vh">
-      {/* <ParticlesBackground /> */}
-      <Flex direction="row" alignItems="stretch" flexGrow={1} py={10}>
-        <Flex w="40%" py="10%">
+    <Section sectionId="section1" bgColor="gray.100" minH="100vh" py={16}>
+      <Flex direction="row" alignItems="stretch" flexGrow={1}>
+        <Flex w="50%">
           <Stack alignItems="center" spacing={10}>
             <Flex bgColor="gray.500" boxSize="200px" boxShadow="lg" borderRadius="100%"></Flex>
-            <Heading color="gray.800" size="2xl" fontFamily={fonts.spartan} fontWeight={400}>
+            <Heading color="gray.800" size="xl" fontFamily={fonts.spartan} fontWeight={400}>
               Olivier Ramier
             </Heading>
           </Stack>
         </Flex>
 
-        <Flex direction="column" py={20} fontFamily={fonts.spartan}>
-          <Text mb={8} overflow="clip">
-            I'm a french <Underlined>software engineer</Underlined> living in Berlin, passionate about the web,
-            technology and learning.
-          </Text>
-          <Box>
-            <Text fontWeight={800} color="gray.750" fontStyle="underlined" mb={3}>
-              My jam:
+        <Flex direction="column" alignItems="stretch" justifyContent="center">
+          <Flex direction="column" fontFamily={fonts.spartan} fontSize="lg" px={10}>
+            <Text mb={12} overflow="clip" fontSize="xl">
+              I'm a french <Underlined>freelance software engineer</Underlined> living in Berlin, passionate about the
+              web, technology and learning.
             </Text>
-            <Text ml={6}>
-              Building stuff (checkout{' '}
-              <ScrollLink
-                activeClass="active_section_link"
-                to={SectionIds.projects}
-                spy={true}
-                smooth={true}
-                duration={600}
-              >
-                <Link color="baby-blue-eyes" fontWeight={600}>
-                  Sci-Map
-                </Link>
-              </ScrollLink>
-              )
-            </Text>
-            <Text ml={6}>Freelance services in software development and consulting.</Text>
-          </Box>
+            <Box>
+              <Text fontWeight={800} color="gray.750" fontStyle="underlined" mb={3}>
+                My jam:
+              </Text>
+              <Text ml={6}>
+                Building stuff (checkout{' '}
+                <ScrollLink
+                  activeClass="active_section_link"
+                  to={SectionIds.projects}
+                  spy={true}
+                  smooth={true}
+                  duration={600}
+                >
+                  <Link color="baby-blue-eyes" fontWeight={600}>
+                    Sci-Map
+                  </Link>
+                </ScrollLink>
+                )
+              </Text>
+              <Text ml={6}>Freelance services in fullstack software development and consulting.</Text>
+            </Box>
+          </Flex>
         </Flex>
       </Flex>
-      <Flex pb={20} direction={{ base: 'column', lg: 'row' }}>
+      <Flex pt={20} pb={20} direction={{ base: 'column', lg: 'row' }}>
         <Heading mr={3} fontWeight={500}>
           About Me
         </Heading>
