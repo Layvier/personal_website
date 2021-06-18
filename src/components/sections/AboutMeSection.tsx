@@ -12,28 +12,54 @@ import ProfilePicture from '../../images/brick_wall_800px.jpg';
 export const AboutMeSection: React.FC<{}> = () => {
   return (
     <Section sectionId="section1" bgColor="gray.100" minH="100vh" py={16}>
-      <Flex direction="row" alignItems="stretch" flexGrow={1}>
-        <Flex w="50%">
+      <Flex direction="column" alignItems="stretch" flexGrow={1}>
+        <Center mb={10}>
+          <Heading fontSize="7xl" color="gray.350" opacity={1} letterSpacing={12}>
+            Olivier
+          </Heading>
           <Stack alignItems="center" spacing={10}>
-            <Image borderRadius="50%" boxSize="200px" boxShadow="lg" src={ProfilePicture} alt="Olivier Ramier" />
-            <Heading color="gray.800" size="xl" fontFamily={fonts.spartan} fontWeight={400}>
-              Olivier Ramier
-            </Heading>
+            <Image
+              borderRadius="50%"
+              mx={8}
+              boxSize="140px"
+              boxShadow="lg"
+              src={ProfilePicture}
+              alt="Olivier Ramier"
+              opacity={0.9}
+            />
           </Stack>
-        </Flex>
+          <Heading fontSize="7xl" color="gray.350" opacity={1} letterSpacing={12}>
+            Ramier
+          </Heading>
+        </Center>
 
-        <Flex direction="column" alignItems="stretch" justifyContent="center">
+        <Flex direction="column" alignItems="stretch" justifyContent="center" px="15%">
           <Flex direction="column" fontFamily={fonts.spartan} fontSize="lg" px={10}>
-            <Text mb={12} overflow="clip" fontSize="xl">
+            <Text mb={8} overflow="clip" fontSize="lg" textAlign="center">
               I'm a french <Underlined>freelance software engineer</Underlined> living in Berlin, passionate about the
               web, technology and learning.
             </Text>
-            <Box>
-              <Text fontWeight={800} color="gray.750" fontStyle="underlined" mb={3}>
-                My jam:
-              </Text>
+            <Center flexDirection="column">
+              <Flex w="100%" alignItems="center" mb={2}>
+                <Divider borderColor="onyx" />
+                <Text
+                  mx={4}
+                  fontWeight={800}
+                  color="gray.750"
+                  fontStyle="underlined"
+                  flexGrow={1}
+                  textOverflow="initial"
+                  whiteSpace="nowrap"
+                >
+                  My jam:
+                </Text>
+                <Divider borderColor="onyx" />
+              </Flex>
               <Text ml={6}>
-                Building stuff (checkout{' '}
+                <Text as="span" fontWeight={600} color="opal">
+                  Building stuff
+                </Text>{' '}
+                (checkout{' '}
                 <ScrollLink
                   activeClass="active_section_link"
                   to={SectionIds.projects}
@@ -47,12 +73,17 @@ export const AboutMeSection: React.FC<{}> = () => {
                 </ScrollLink>
                 )
               </Text>
-              <Text ml={6}>Freelance services in fullstack software development and consulting.</Text>
-            </Box>
+              <Text ml={6}>
+                <Text as="span" fontWeight={600} color="opal">
+                  Freelance services
+                </Text>{' '}
+                in fullstack software development and consulting.
+              </Text>
+            </Center>
           </Flex>
         </Flex>
       </Flex>
-      <Flex pt={20} pb={20} direction={{ base: 'column', lg: 'row' }}>
+      <Flex pt={24} pb={20} direction={{ base: 'column', lg: 'row' }}>
         <Heading mr={3} fontWeight={500}>
           About Me
         </Heading>
