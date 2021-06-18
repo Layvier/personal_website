@@ -7,7 +7,7 @@ import { fonts } from '../../theme';
 import { Underlined } from '../Underlined';
 import { Section } from './Section';
 // @ts-ignore
-import ProfilePicture from '../../images/profile_pic.jpg';
+import ProfilePicture from '../../images/brick_wall_800px.jpg';
 
 export const AboutMeSection: React.FC<{}> = () => {
   return (
