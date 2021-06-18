@@ -1,3 +1,4 @@
+import { Image } from '@chakra-ui/image';
 import { Box, Center, Divider, Flex, Heading, Link, Stack, Text } from '@chakra-ui/layout';
 import * as React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
@@ -5,6 +6,7 @@ import { SectionIds } from '../../pages';
 import { fonts } from '../../theme';
 import { Underlined } from '../Underlined';
 import { Section } from './Section';
+import ProfilePicture from '../../images/profile_pic.jpg';
 
 export const AboutMeSection: React.FC<{}> = () => {
   return (
@@ -12,7 +14,7 @@ export const AboutMeSection: React.FC<{}> = () => {
       <Flex direction="row" alignItems="stretch" flexGrow={1}>
         <Flex w="50%">
           <Stack alignItems="center" spacing={10}>
-            <Flex bgColor="gray.500" boxSize="200px" boxShadow="lg" borderRadius="100%"></Flex>
+            <Image borderRadius="50%" boxSize="200px" boxShadow="lg" src={ProfilePicture} alt="Olivier Ramier" />
             <Heading color="gray.800" size="xl" fontFamily={fonts.spartan} fontWeight={400}>
               Olivier Ramier
             </Heading>
