@@ -11,8 +11,8 @@ import '@fontsource/raleway/800.css';
 
 export const fonts = {
   bebasNeue: 'Bebas Neue',
-  spartan: 'Spartan',
-  raleway: 'Raleway',
+  spartan: 'Spartan,Roboto,Open Sans',
+  raleway: 'Raleway,Avenir,Roboto,Open Sans',
 };
 
 export const theme = extendTheme({
