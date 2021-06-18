@@ -6,6 +6,7 @@ import { SectionIds } from '../../pages';
 import { fonts } from '../../theme';
 import { Underlined } from '../Underlined';
 import { Section } from './Section';
+// @ts-ignore
 import ProfilePicture from '../../images/profile_pic.jpg';
 
 export const AboutMeSection: React.FC<{}> = () => {
