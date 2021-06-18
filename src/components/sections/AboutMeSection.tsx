@@ -11,76 +11,94 @@ import ProfilePicture from '../../images/brick_wall_800px.jpg';
 
 export const AboutMeSection: React.FC<{}> = () => {
   return (
-    <Section sectionId="section1" bgColor="gray.100" minH="100vh" py={16}>
+    <Section sectionId="section1" bgColor="gray.100" minH="100vh" py={{ base: 6, md: 12 }}>
       <Flex direction="column" alignItems="stretch" flexGrow={1}>
-        <Center mb={10}>
-          <Heading fontSize="7xl" color="gray.350" opacity={1} letterSpacing={12}>
+        <Center mb={10} flexDirection={{ base: 'column', md: 'row' }}>
+          <Heading
+            fontSize={{ base: '5xl', md: '6xl', lg: '7xl' }}
+            color="gray.350"
+            opacity={1}
+            letterSpacing={{ base: 5, md: 8, lg: 12 }}
+          >
             Olivier
           </Heading>
           <Stack alignItems="center" spacing={10}>
             <Image
+              objectFit="fill"
               borderRadius="50%"
               mx={8}
+              minW="140px"
               boxSize="140px"
               boxShadow="lg"
               src={ProfilePicture}
               alt="Olivier Ramier"
               opacity={0.9}
+              flexShrink={0}
             />
           </Stack>
-          <Heading fontSize="7xl" color="gray.350" opacity={1} letterSpacing={12}>
+          <Heading
+            fontSize={{ base: '5xl', md: '6xl', lg: '7xl' }}
+            color="gray.350"
+            opacity={1}
+            letterSpacing={{ base: 5, lg: 12 }}
+          >
             Ramier
           </Heading>
         </Center>
 
-        <Flex direction="column" alignItems="stretch" justifyContent="center" px="15%">
-          <Flex direction="column" fontFamily={fonts.spartan} fontSize="lg" px={10}>
-            <Text mb={8} overflow="clip" fontSize="lg" textAlign="center">
-              I'm a french <Underlined>freelance software engineer</Underlined> living in Berlin, passionate about the
-              web, technology and learning.
+        <Flex
+          direction="column"
+          fontFamily={fonts.spartan}
+          alignItems="stretch"
+          justifyContent="center"
+          px={{ base: 2, sm: 8, md: '15%' }}
+          fontSize="lg"
+        >
+          <Text mb={8} overflow="clip" fontSize="lg" textAlign="center">
+            I'm a french <Underlined>freelance software engineer</Underlined> living in Berlin, passionate about the
+            web, technology and learning.
+          </Text>
+          <Center flexDirection="column">
+            <Flex w="100%" alignItems="center" mb={2}>
+              <Divider borderColor="onyx" />
+              <Text
+                mx={4}
+                fontWeight={800}
+                color="gray.750"
+                fontStyle="underlined"
+                flexGrow={1}
+                textOverflow="initial"
+                whiteSpace="nowrap"
+              >
+                My jam:
+              </Text>
+              <Divider borderColor="onyx" />
+            </Flex>
+            <Text ml={6}>
+              <Text as="span" fontWeight={600} color="opal">
+                Building stuff
+              </Text>{' '}
+              (checkout{' '}
+              <ScrollLink
+                activeClass="active_section_link"
+                to={SectionIds.projects}
+                spy={true}
+                smooth={true}
+                duration={600}
+              >
+                <Link color="baby-blue-eyes" fontWeight={600}>
+                  Sci-Map
+                </Link>
+              </ScrollLink>
+              )
             </Text>
-            <Center flexDirection="column">
-              <Flex w="100%" alignItems="center" mb={2}>
-                <Divider borderColor="onyx" />
-                <Text
-                  mx={4}
-                  fontWeight={800}
-                  color="gray.750"
-                  fontStyle="underlined"
-                  flexGrow={1}
-                  textOverflow="initial"
-                  whiteSpace="nowrap"
-                >
-                  My jam:
-                </Text>
-                <Divider borderColor="onyx" />
-              </Flex>
-              <Text ml={6}>
-                <Text as="span" fontWeight={600} color="opal">
-                  Building stuff
-                </Text>{' '}
-                (checkout{' '}
-                <ScrollLink
-                  activeClass="active_section_link"
-                  to={SectionIds.projects}
-                  spy={true}
-                  smooth={true}
-                  duration={600}
-                >
-                  <Link color="baby-blue-eyes" fontWeight={600}>
-                    Sci-Map
-                  </Link>
-                </ScrollLink>
-                )
-              </Text>
-              <Text ml={6}>
-                <Text as="span" fontWeight={600} color="opal">
-                  Freelance services
-                </Text>{' '}
-                in fullstack software development and consulting.
-              </Text>
-            </Center>
-          </Flex>
+            <Text ml={6}>
+              <Text as="span" fontWeight={600} color="opal">
+                Freelance services
+              </Text>{' '}
+              in fullstack software development and consulting.
+            </Text>
+          </Center>
         </Flex>
       </Flex>
       <Flex pt={24} pb={20} direction={{ base: 'column', lg: 'row' }}>
