@@ -32,7 +32,7 @@ export const AboutMeSection: React.FC<{}> = () => {
               boxShadow="lg"
               src={ProfilePicture}
               alt="Olivier Ramier"
-              opacity={0.9}
+              opacity={0.94}
               flexShrink={0}
             />
           </Stack>
@@ -64,13 +64,13 @@ export const AboutMeSection: React.FC<{}> = () => {
               <Text
                 mx={4}
                 fontWeight={800}
-                color="gray.750"
+                color="onyx"
                 fontStyle="underlined"
                 flexGrow={1}
                 textOverflow="initial"
                 whiteSpace="nowrap"
               >
-                My jam:
+                My jam
               </Text>
               <Divider borderColor="onyx" />
             </Flex>

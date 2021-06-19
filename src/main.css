@@ -19,3 +19,7 @@
   position: inherit;
   z-index: 1;
 } */
+
+.searchmatch {
+  font-weight: 800;
+}
