@@ -22,8 +22,8 @@ export const ContactSection: React.FC<{}> = () => {
         flexDirection="column"
       >
         <Stack direction="row" alignItems="baseline" spacing={8}>
-          <Link href="mailto:olivier.ramier@gmail.com" isExternal mt={4}>
-            <Heading color="baby-blue-eyes">olivier.ramier@gmail.com</Heading>
+          <Link href="mailto:hi@olivierramier.xyz" isExternal mt={4}>
+            <Heading color="baby-blue-eyes">hi@olivierramier.xyz</Heading>
           </Link>
         </Stack>
         <Stack direction="row" spacing={12} mt={8}>
