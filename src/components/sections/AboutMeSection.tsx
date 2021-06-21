@@ -16,7 +16,7 @@ export const AboutMeSection: React.FC<{}> = () => {
         <Center mb={10} flexDirection={{ base: 'column', md: 'row' }}>
           <Heading
             fontSize={{ base: '5xl', md: '6xl', lg: '7xl' }}
-            color="gray.350"
+            color="dim-gray"
             opacity={1}
             letterSpacing={{ base: 5, md: 8, lg: 12 }}
           >
@@ -38,7 +38,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Stack>
           <Heading
             fontSize={{ base: '5xl', md: '6xl', lg: '7xl' }}
-            color="gray.350"
+            color="dim-gray"
             opacity={1}
             letterSpacing={{ base: 5, lg: 12 }}
           >
@@ -132,7 +132,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Text>
         </Stack>
 
-        <Center py={{ base: 10, lg: 0 }} px={10}>
+        <Center py={{ base: 10, lg: 0 }} px={{ base: 0, lg: 10 }}>
           <Box position="relative" boxSize="330px">
             <Flex
               boxSize="300px"
