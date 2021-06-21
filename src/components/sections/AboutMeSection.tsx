@@ -102,15 +102,17 @@ export const AboutMeSection: React.FC<{}> = () => {
         </Flex>
       </Flex>
       <Flex pt={24} pb={20} direction={{ base: 'column', lg: 'row' }}>
-        <Heading mr={3} fontWeight={500}>
+        <Heading mr={3} fontWeight={400} fontSize="6xl">
           About Me
         </Heading>
         <Stack direction="column" fontWeight={300} fontSize="lg">
           <Text>
             Growing up in the South West of France, I quickly got hooked by the web and started programming at 11. Later
-            on, I graduated from <Underlined fontWeight={600}>IMT Atlantique</Underlined> with an angineering degree in{' '}
-            <Underlined fontWeight={600}>mathematical optimization</Underlined>, a field leveraging applied mathematics,
-            graph theory and algorithms to solve NP-complete problems, particularly found in logistics.
+            on, I graduated from <Underlined fontWeight={600}>IMT</Underlined>{' '}
+            <Underlined fontWeight={600}>Atlantique</Underlined> with an angineering degree in{' '}
+            <Underlined fontWeight={600}>mathematical</Underlined>{' '}
+            <Underlined fontWeight={600}>optimization</Underlined>, a field leveraging applied mathematics, graph theory
+            and algorithms to solve NP-complete problems, particularly found in logistics.
           </Text>
           <Text>
             I moved to Berlin in 2016 to work in startups and see the challenges they face from the inside. I worked at{' '}
@@ -123,9 +125,10 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Text>
 
           <Text>
-            As a <Underlined fontWeight={600}>tech generalist</Underlined> and pragmatic{' '}
-            <Underlined fontWeight={600}>problem solver</Underlined>, I focus on finding innovative solutions to real
-            world problems by combining diverse technologies and applying proven methodologies.
+            As a <Underlined fontWeight={600}>tech</Underlined> <Underlined fontWeight={600}>generalist</Underlined> and
+            pragmatic <Underlined fontWeight={600}>problem</Underlined> <Underlined fontWeight={600}>solver</Underlined>
+            , I focus on finding innovative solutions to real world problems by combining diverse technologies and
+            applying proven methodologies.
           </Text>
         </Stack>
 

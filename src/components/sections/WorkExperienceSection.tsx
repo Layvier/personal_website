@@ -68,7 +68,7 @@ export const WorkExperienceSection: React.FC<{}> = () => {
         <Heading color="gray.150" fontWeight={400} fontSize="7xl">
           Previously
         </Heading>
-        <Divider borderWidth={2} borderColor="gray.150" opacity={1} mt={2} />
+        {/* <Divider borderWidth={2} borderColor="gray.150" opacity={1} mt={2} /> */}
       </Flex>
       <Stack spacing={16} zIndex={2}>
         {workExperiences.map(workExperience => (
