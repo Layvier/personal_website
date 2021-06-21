@@ -136,7 +136,7 @@ const skills: Skill[] = [
     name: 'Functional Programming',
     size: 8,
     popoverContent:
-      '<span class="searchmatch">functional</span> <span class="searchmatch">programming</span> is a declarative programming paradigm where programs are constructed by applying and composing functions.',
+      '<span class="searchmatch">Functional</span> <span class="searchmatch">programming</span> is a declarative programming paradigm where programs are constructed by applying and composing functions.',
     seeMoreLink: 'https://en.wikipedia.org/wiki/Functional%20programming',
   },
   {
