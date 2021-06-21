@@ -33,5 +33,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `olivierramier.xyz`,
+        customDomain: `https://analytics.sci-map.org/js/plausible.js?original=`,
+      },
+    },
   ],
 };
