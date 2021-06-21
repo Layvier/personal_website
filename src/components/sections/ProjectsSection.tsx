@@ -13,7 +13,7 @@ export const ProjectsSection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.projects} bgColor="gray.50" py={10}>
       <Flex direction="row-reverse" py={4}>
-        <Heading fontWeight={400} fontSize="7xl" color="onyx">
+        <Heading fontWeight={400} fontSize={{ base: '6xl', lg: '7xl' }} color="onyx">
           Projects
         </Heading>
       </Flex>

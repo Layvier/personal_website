@@ -102,7 +102,7 @@ export const AboutMeSection: React.FC<{}> = () => {
         </Flex>
       </Flex>
       <Flex pt={24} pb={20} direction={{ base: 'column', lg: 'row' }}>
-        <Heading mr={3} fontWeight={400} fontSize="6xl">
+        <Heading mr={3} fontWeight={400} fontSize={{ base: '5xl', lg: '6xl' }}>
           About Me
         </Heading>
         <Stack direction="column" fontWeight={300} fontSize="lg">
@@ -132,7 +132,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Text>
         </Stack>
 
-        <Center py={{ base: 10, lg: 0 }} px={{ base: 0, lg: 10 }}>
+        <Center pt={{ base: 10, lg: 0 }} px={{ base: 0, lg: 10 }}>
           <Box position="relative" boxSize="330px">
             <Flex
               boxSize="300px"

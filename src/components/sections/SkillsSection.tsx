@@ -243,7 +243,7 @@ export const SkillsSection: React.FC<{}> = () => {
   return (
     <Section sectionId="section3" minH="100vh" bgColor="onyx">
       <Center mt={20}>
-        <Heading fontWeight={400} fontSize="7xl" color="white">
+        <Heading fontWeight={400} fontSize={{ base: '6xl', lg: '7xl' }} color="white">
           Skills
         </Heading>
       </Center>

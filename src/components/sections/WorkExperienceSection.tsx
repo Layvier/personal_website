@@ -65,7 +65,7 @@ export const WorkExperienceSection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.section2} bgColor="gray.800" pt={20} pb={32}>
       <Flex direction="column" pb={20}>
-        <Heading color="gray.150" fontWeight={400} fontSize="7xl">
+        <Heading color="gray.150" fontWeight={400} fontSize={{ base: '6xl', lg: '7xl' }}>
           Previously
         </Heading>
         {/* <Divider borderWidth={2} borderColor="gray.150" opacity={1} mt={2} /> */}
