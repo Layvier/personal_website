@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `olivierramier.xyz`,
-        customDomain: `https://analytics.sci-map.org/js/plausible.js?original=`,
+        customDomain: `analytics.sci-map.org/js/plausible.js?original=`,
       },
     },
   ],
