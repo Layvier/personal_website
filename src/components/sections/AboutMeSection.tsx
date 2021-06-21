@@ -86,7 +86,7 @@ export const AboutMeSection: React.FC<{}> = () => {
                 smooth={true}
                 duration={600}
               >
-                <Link color="baby-blue-eyes" fontWeight={600}>
+                <Link as="span" color="baby-blue-eyes" fontWeight={600}>
                   Sci-Map
                 </Link>
               </ScrollLink>

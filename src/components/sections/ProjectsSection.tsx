@@ -2,8 +2,8 @@ import { ArrowForwardIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
 import { Box, Center, Flex, Heading, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/layout';
 import * as React from 'react';
-// @ts-ignore
-import SciMapWalkthroughGif from '../../images/sci-map_walkthrough.gif';
+//@ts-ignore
+import SciMapWalkthroughVideo from '../../images/sci-map_walkthrough.webm';
 import { SectionIds } from '../../pages/index';
 import { fonts } from '../../theme';
 import { Link } from '../Link';
@@ -32,14 +32,13 @@ export const ProjectsSection: React.FC<{}> = () => {
           content={
             <Stack spacing={5} mt={4}>
               <Center flexDirection="column">
-                <Image
-                  w="80%"
-                  maxW="700px"
-                  src={SciMapWalkthroughGif}
-                  alt="Walkthrough of Sci-Map.org"
-                  boxShadow="md"
-                />
-                <Text maxW="800px" textAlign="center" mt={3} fontSize="lg" fontWeight={800} color="sonic-silver">
+                <Box w="80%" maxW="800px" boxShadow="md">
+                  <video autoPlay muted>
+                    <source src={SciMapWalkthroughVideo} type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                </Box>
+                <Text maxW="860px" textAlign="center" mt={3} fontSize="lg" fontWeight={800} color="sonic-silver">
                   A non profit, collaborative learning map to explore knowledge intuitively, and find the best learning
                   materials.
                 </Text>
@@ -60,9 +59,9 @@ export const ProjectsSection: React.FC<{}> = () => {
                     <ListItem display="flex" alignItems="center">
                       <ListIcon as={ArrowForwardIcon} color="almond" />
                       <Text as="span">
-                        Learn more about it{' '}
+                        Learn more about it in the{' '}
                         <Link href="https://sci-map.org/about" fontWeight={600} isExternal>
-                          here
+                          About section
                         </Link>
                       </Text>
                     </ListItem>
