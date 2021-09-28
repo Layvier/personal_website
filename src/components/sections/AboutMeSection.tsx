@@ -55,8 +55,8 @@ export const AboutMeSection: React.FC<{}> = () => {
           fontSize="lg"
         >
           <Text mb={8} overflow="clip" fontSize="lg" textAlign="center">
-            I'm a french <Underlined>freelance software engineer</Underlined> living in Berlin, passionate about the
-            web, technology and learning.
+            I'm a french <Underlined>freelance</Underlined> <Underlined>software engineer</Underlined> living in Berlin,
+            passionate about the web, technology and learning.
           </Text>
           <Center flexDirection="column">
             <Flex w="100%" alignItems="center" mb={2}>

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Olivier Ramier | Freelance Software Engineer`,
     description: `
-    This the personal website of Olivier Ramier. I'm a freelance french software engineer living in Berlin, passionate about the web, technology and learning. I provide full-stack software development in TypeScript, React.js, Node.js, GraphQl`,
+    Personal website of Olivier Ramier. I'm a freelance french software engineer living in Berlin, passionate about the web, technology and learning. I provide full-stack software development in TypeScript, React.js, Node.js, GraphQl`,
     author: `@olivier_ramier`,
   },
   plugins: [
