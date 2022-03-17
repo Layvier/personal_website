@@ -18,6 +18,8 @@ import { Section } from "./Section";
 // @ts-ignore
 import ProfilePicture from "../../images/brick_wall_800px.jpg";
 
+const desktopBreakpoint = "lg";
+
 export const AboutMeSection: React.FC<{}> = () => {
   return (
     <Section
@@ -115,7 +117,11 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Center>
         </Flex>
       </Flex>
-      <Flex pt={24} pb={20} direction={{ base: "column", lg: "row" }}>
+      <Flex
+        pt={24}
+        pb={20}
+        direction={{ base: "column", [desktopBreakpoint]: "row" }}
+      >
         <Heading mr={3} fontWeight={400} fontSize={{ base: "5xl", lg: "6xl" }}>
           About Me
         </Heading>
@@ -154,7 +160,10 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Text>
         </Stack>
 
-        <Center pt={{ base: 10, lg: 0 }} px={{ base: 0, lg: 10 }}>
+        <Center
+          pt={{ base: 10, [desktopBreakpoint]: 0 }}
+          px={{ base: 0, [desktopBreakpoint]: 10 }}
+        >
           <FreelanceServicesBlock />
         </Center>
       </Flex>
@@ -213,10 +222,73 @@ const FreelanceServicesBlock: React.FC<{}> = ({}) => {
   );
 };
 
+const testimonials: {
+  from: string;
+  role: string;
+  companyName: string;
+  companyUrl: string;
+  message: string;
+}[] = [
+  {
+    from: "Dimitri Page",
+    role: "Product Manager",
+    companyName: "Wonder",
+    companyUrl: "https://wonder.me/",
+    message: `It was a pleasure to work with Olivier. He worked diligently to make sure that features were truly complete and had a very pro-active attitude to reaching out in order to align with his stakeholders. 
+    During discovery ideations he came up with loads of great concept that just show how much he was thinking about the product. Last but not least, he was fun to work with.
+    I'm sad to see him go and would recommend him without any hesitation.`,
+  },
+  {
+    from: "Benjamin Dumke-von der Ehe",
+    role: "Engineering Manager",
+    companyName: "Wonder",
+    companyUrl: "https://wonder.me/",
+    message: `Working with Olivier was a pleasure. In the four months that he was with us, he integrated well into the team and the whole organization. He has a keen eye for the product and the users' concerns, and with his technical skills he made many valuable contributions to our codebase at an exciting time for our company. Last but certainly not least, Olivier is a very approachable and friendly person.`,
+  },
+];
 export const TestimonialsBlock: React.FC<{}> = ({}) => {
   return (
-    <Flex py={20}>
-      <Heading>Testimonials</Heading>
+    <Flex direction="column">
+      <Heading mb={4} fontWeight={400} fontSize={{ base: "4xl", lg: "5xl" }}>
+        Testimonials
+      </Heading>
+      <Flex
+        direction={{ base: "column", [desktopBreakpoint]: "row" }}
+        py={6}
+        justifyContent="space-around"
+        alignItems="center"
+        fontStyle="italic"
+      >
+        {testimonials.map((testimonial) => (
+          <Stack
+            alignItems="flex-start"
+            spacing={{ base: 2, [desktopBreakpoint]: 6 }}
+            mb={{ base: 12, [desktopBreakpoint]: 0 }}
+          >
+            <Text textAlign="justify" fontSize="sm" maxW="500px">
+              "{testimonial.message}"
+            </Text>
+            <Text color="onyx">
+              <Text as="span" fontWeight={600}>
+                {testimonial.from}
+              </Text>
+              ,{" "}
+              <Text as="span" fontWeight={600}>
+                {testimonial.role}
+              </Text>{" "}
+              at{" "}
+              <Link
+                fontWeight={600}
+                color="onyx"
+                href={testimonial.companyUrl}
+                isExternal
+              >
+                {testimonial.companyName}
+              </Link>
+            </Text>
+          </Stack>
+        ))}
+      </Flex>
     </Flex>
   );
 };

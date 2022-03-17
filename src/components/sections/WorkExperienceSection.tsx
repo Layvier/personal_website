@@ -15,7 +15,7 @@ import { Section } from "./Section";
 interface WorkExperience {
   companyName: string;
   freelance?: boolean;
-  url?: string;
+  url: string;
   dates: [string, string];
   jobTitle: string;
   description: string;
@@ -29,9 +29,11 @@ const workExperiences: WorkExperience[] = [
     freelance: true,
     jobTitle: "Freelance Fullstack Engineer",
     description:
-      "Freelancing contract for a Berlin startup developing a spatial chat interactive application for virtual events.",
+      "Freelancing contract for a Berlin startup developing a spatial chat interactive application for virtual events",
     bulletPoints: [
-      "Contributed mainly to the frontend rewriting of the application in a highly scalable, expandable way. Typescript, React, webrtc, websockets, Node.js. Worked in a cross functional team, involved in early product and design decisions.",
+      "Supported the rewriting of the frontend of the application in a highly scalable, expandable and maintainable way",
+      "Worked in a cross functional team, was involved in early product and design decisions",
+      "Tech stack: Typescript, React, Sass, WebRTC, WebSockets, Node.js",
     ],
     dates: ["July 2021", "October 2021"],
   },
@@ -77,6 +79,7 @@ const workExperiences: WorkExperience[] = [
   {
     companyName: "PersEE",
     jobTitle: "Optimization Developer",
+    url: "https://pers-ee.com/#/",
     description:
       "Optimization development (applied mathematics) in a start-up providing decision-support tools for hydrogen usage as a green energy vector",
     bulletPoints: [
@@ -121,15 +124,19 @@ const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({
         alignItems={{ base: "center", lg: "flex-end" }}
       >
         <Heading textAlign={{ base: "center", lg: "right" }} color="white">
-          <Link
-            href={workExperience.url}
-            isExternal
-            borderColor="white"
-            _active={{}}
-            _focus={{}}
-          >
-            {workExperience.companyName}
-          </Link>
+          {workExperience.url ? (
+            <Link
+              href={workExperience.url}
+              isExternal
+              borderColor="white"
+              _active={{}}
+              _focus={{}}
+            >
+              {workExperience.companyName}
+            </Link>
+          ) : (
+            workExperience.companyName
+          )}
         </Heading>
         {workExperience.freelance && (
           <Text size="xs" fontWeight={600} color="yellow.200">
