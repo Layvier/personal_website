@@ -1,5 +1,4 @@
 import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-import { Image } from "@chakra-ui/image";
 import {
   Box,
   Center,
@@ -25,7 +24,7 @@ export const ProjectsSection: React.FC<{}> = () => {
       <Flex
         direction="row-reverse"
         py={4}
-        borderBottomWidth={4}
+        borderBottomWidth={3}
         borderBottomColor="gray.100"
         mb={10}
       >
@@ -49,158 +48,136 @@ export const ProjectsSection: React.FC<{}> = () => {
               </Heading>
             </Heading>
           }
-          content={
-            <Stack spacing={5} mt={4}>
+          renderTop={
+            <Flex direction="column" mt={6}>
               <Center flexDirection="column">
-                <Box w="80%" maxW="800px" boxShadow="md">
+                <Box w="80%" maxW="800px" boxShadow="md" mb={16}>
                   <video autoPlay muted>
                     <source src={SciMapWalkthroughVideo} type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
                 </Box>
-                <Text
-                  maxW="860px"
-                  textAlign="center"
-                  mt={3}
-                  fontSize="lg"
-                  fontWeight={800}
-                  color="sonic-silver"
-                >
-                  A non profit, collaborative learning map to explore knowledge
-                  intuitively, and find the best learning materials.
-                </Text>
               </Center>
-              <Stack direction={{ base: "column", lg: "row" }} spacing={5}>
-                <Box flexGrow={1}>
-                  <Text>
-                    Having learned a lot online, in a self directed way, I
-                    always thought that something was missing to help find our
-                    way through this ocean of information.
-                  </Text>
-                  <Text mt={2}>
-                    With this project, my goal is to improve the way people
-                    learn online and create a new way to consume knowledge by
-                    leveraging the collective intelligence.
-                  </Text>
-                </Box>
-                <Box minW="40%" fontFamily={fonts.spartan} fontWeight={500}>
-                  <List spacing={3}>
-                    <ListItem display="flex" alignItems="center">
-                      <ListIcon as={ArrowForwardIcon} color="almond" />
-                      <Text as="span">
-                        Learn more about it in the{" "}
-                        <Link
-                          href="https://sci-map.org/about"
-                          fontWeight={600}
-                          isExternal
-                        >
-                          About section
-                        </Link>
-                      </Text>
-                    </ListItem>
-                    <ListItem display="flex" alignItems="center">
-                      <ListIcon as={ArrowForwardIcon} color="almond" />
-                      <Text as="span">
-                        Checkout the code on{" "}
-                        <Link
-                          href="http://github.com/sci-map-org/"
-                          fontWeight={600}
-                          isExternal
-                        >
-                          Github
-                        </Link>
-                      </Text>
-                    </ListItem>
-                    <ListItem display="flex">
-                      <ListIcon as={ArrowForwardIcon} color="almond" mt={1} />
-                      <Text as="span">
-                        <Text fontWeight={600} as="span">
-                          Tech stack:
-                        </Text>{" "}
-                        <Text as="span" fontWeight={300} fontSize="sm">
-                          Node.js, TypeScript, Neo4j, Next.js, React, Apollo
-                          server/client, Chakra UI
-                        </Text>
-                      </Text>
-                    </ListItem>
-                  </List>
-                </Box>
-              </Stack>
-            </Stack>
+            </Flex>
           }
+          subTitle={
+            <Text
+              maxW="100%"
+              fontSize="lg"
+              fontWeight={800}
+              color="sonic-silver"
+              mb={4}
+            >
+              A non profit, collaborative learning map to explore knowledge
+              intuitively, and find the best learning materials.
+            </Text>
+          }
+          description={
+            <>
+              <Text>
+                Having learned a lot online, in a self directed way, I always
+                thought that something was missing to help find our way through
+                this ocean of information.
+              </Text>
+              <Text mt={2}>
+                With this project, my goal is to improve the way people learn
+                online and create a new way to consume knowledge by leveraging
+                the collective intelligence.
+              </Text>
+            </>
+          }
+          bulletPointsIconColor="almond"
+          bulletPoints={[
+            <Text as="span">
+              Learn more about it in the{" "}
+              <Link
+                href="https://sci-map.org/about"
+                fontWeight={600}
+                isExternal
+              >
+                About section
+              </Link>
+            </Text>,
+            <Text as="span">
+              Checkout the code on{" "}
+              <Link
+                href="http://github.com/sci-map-org/"
+                fontWeight={600}
+                isExternal
+              >
+                Github
+              </Link>
+            </Text>,
+            <Text as="span">
+              <Text fontWeight={600} as="span">
+                Tech stack:
+              </Text>{" "}
+              <Text as="span" fontWeight={300} fontSize="sm">
+                Node.js, TypeScript, Neo4j, Next.js, React, Apollo
+                server/client, Chakra UI
+              </Text>
+            </Text>,
+          ]}
         />
         <Project
           title={
             <Heading color="almond">Ant Colony Optimization algorithm</Heading>
           }
-          content={
-            <Stack spacing={5} direction={{ base: "column", lg: "row" }}>
-              <Box flexGrow={1}>
-                <Text>
-                  “Ant colony” is a fascinating optimization algorithm inspired
-                  by how ants find the shortest path between food sources and
-                  their colony.
-                </Text>
-                <Text mt={2}>
-                  I decided to leverage Elixir’s actor model to simulate ants in
-                  their own processes and solve the famous{" "}
-                  <Link
-                    href="https://en.wikipedia.org/wiki/Travelling_salesman_problem"
-                    fontWeight={600}
-                  >
-                    Travelling Salesman Problem (TSP)
-                  </Link>
-                  . This approach makes the algorithm extremely scalable as it
-                  is then able to run on thousands of processors at the same
-                  time.
-                </Text>
-              </Box>
-              <Box minW="40%">
-                <List spacing={3} fontFamily={fonts.spartan} fontWeight={500}>
-                  <ListItem display="flex" alignItems="center">
-                    <ListIcon as={ArrowForwardIcon} color="opal" />
-                    <Text as="span">
-                      More on{" "}
-                      <Link
-                        href="https://www.youtube.com/watch?v=783ZtAF4j5g"
-                        fontWeight={600}
-                        isExternal
-                      >
-                        Ant Colony Optimization
-                      </Link>
-                    </Text>
-                  </ListItem>
-                  <ListItem display="flex" alignItems="center">
-                    <ListIcon as={ArrowForwardIcon} color="opal" />
-                    <Text as="span">
-                      Checkout the code on{" "}
-                      <Link
-                        href="https://github.com/Layvier/ant-colony-elixir"
-                        fontWeight={600}
-                        isExternal
-                      >
-                        Github
-                      </Link>
-                    </Text>
-                  </ListItem>
-                  <ListItem display="flex">
-                    <ListIcon as={ArrowForwardIcon} color="opal" mt={1} />
-                    <Text as="span">
-                      A{" "}
-                      <Link
-                        href="https://poolik.github.io/visual-aco/#/visualisation"
-                        fontWeight={600}
-                        isExternal
-                      >
-                        visualisation
-                      </Link>{" "}
-                      of Ant Colony Optimization
-                    </Text>
-                  </ListItem>
-                </List>
-              </Box>
-            </Stack>
+          description={
+            <>
+              <Text>
+                “Ant colony” is a fascinating optimization algorithm inspired by
+                how ants find the shortest path between food sources and their
+                colony.
+              </Text>
+              <Text mt={2}>
+                I decided to leverage Elixir’s actor model to simulate ants in
+                their own processes and solve the famous{" "}
+                <Link
+                  href="https://en.wikipedia.org/wiki/Travelling_salesman_problem"
+                  fontWeight={600}
+                >
+                  Travelling Salesman Problem (TSP)
+                </Link>
+                . This approach makes the algorithm extremely scalable as it is
+                then able to run on thousands of processors at the same time.
+              </Text>
+            </>
           }
+          bulletPointsIconColor="opal"
+          bulletPoints={[
+            <Text as="span">
+              More on{" "}
+              <Link
+                href="https://www.youtube.com/watch?v=783ZtAF4j5g"
+                fontWeight={600}
+                isExternal
+              >
+                Ant Colony Optimization
+              </Link>
+            </Text>,
+            <Text as="span">
+              Checkout the code on{" "}
+              <Link
+                href="https://github.com/Layvier/ant-colony-elixir"
+                fontWeight={600}
+                isExternal
+              >
+                Github
+              </Link>
+            </Text>,
+            <Text as="span">
+              A{" "}
+              <Link
+                href="https://poolik.github.io/visual-aco/#/visualisation"
+                fontWeight={600}
+                isExternal
+              >
+                visualisation
+              </Link>{" "}
+              of Ant Colony Optimization
+            </Text>,
+          ]}
         />
       </Stack>
     </Section>
@@ -209,13 +186,44 @@ export const ProjectsSection: React.FC<{}> = () => {
 
 const Project: React.FC<{
   title: React.ReactNode;
-  content: React.ReactNode;
-}> = ({ title, content }) => {
+  renderTop?: React.ReactNode;
+  subTitle?: React.ReactNode;
+  description: React.ReactNode;
+  bulletPointsIconColor: string;
+  bulletPoints: React.ReactNode[];
+}> = ({
+  title,
+  subTitle,
+  renderTop,
+  description,
+  bulletPointsIconColor,
+  bulletPoints,
+}) => {
   return (
     <Flex direction="column">
-      <Flex mb={4}>{title}</Flex>
-      <Flex ml={{ base: 10, sm: 12, md: 16, lg: 32 }} mr={10}>
-        {content}
+      <Flex mb={6}>{title}</Flex>
+      {renderTop}
+      <Flex direction="column" ml={{ base: 4, sm: 8, md: 12, lg: 32 }} mr={10}>
+        {subTitle}
+        <Stack
+          spacing={{ base: 5, lg: 20 }}
+          direction={{ base: "column", lg: "row" }}
+        >
+          <Box flexGrow={1}>{description}</Box>
+          <Box minW="40%">
+            <List spacing={3} fontFamily={fonts.spartan} fontWeight={500}>
+              {bulletPoints.map((bulletPoint) => (
+                <ListItem display="flex" alignItems="center">
+                  <ListIcon
+                    as={ArrowForwardIcon}
+                    color={bulletPointsIconColor}
+                  />
+                  {bulletPoint}
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Stack>
       </Flex>
     </Flex>
   );

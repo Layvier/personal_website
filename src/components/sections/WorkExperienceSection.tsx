@@ -145,12 +145,24 @@ const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({
         )}
       </Flex>
       <Stack pl={4} flexGrow={1} pr={5} mt={1}>
-        <Text
-          color="white"
-          fontWeight={600}
-          textAlign={{ base: "center", lg: "left" }}
-        >
-          {workExperience.description}
+        <Text>
+          <Text
+            as="span"
+            fontWeight={800}
+            letterSpacing="0.05em"
+            color="baby-blue-eyes"
+          >
+            {workExperience.jobTitle}
+          </Text>
+          <Text
+            as="span"
+            color="white"
+            fontWeight={600}
+            textAlign={{ base: "center", lg: "left" }}
+          >
+            {" "}
+            - {workExperience.description}
+          </Text>
         </Text>
         <UnorderedList spacing={1} fontSize="xs" stylePosition="inside">
           {workExperience.bulletPoints.map((bulletPoint) => (
