@@ -1,5 +1,5 @@
-import { Flex, FlexProps } from '@chakra-ui/layout';
-import * as React from 'react';
+import { Flex, FlexProps } from "@chakra-ui/layout";
+import * as React from "react";
 
 export const Section: React.FC<{ sectionId: string } & FlexProps> = ({
   sectionId,
@@ -8,7 +8,14 @@ export const Section: React.FC<{ sectionId: string } & FlexProps> = ({
   ...flexProps
 }) => {
   return (
-    <Flex minH="100vh" id={sectionId} {...flexProps} direction="column" alignItems="stretch" px={{ base: 4, lg: 32 }}>
+    <Flex
+      minH="100vh"
+      id={sectionId}
+      {...flexProps}
+      direction="column"
+      alignItems="stretch"
+      px={{ base: 4, lg: 28, xl: 32 }}
+    >
       {children}
     </Flex>
   );

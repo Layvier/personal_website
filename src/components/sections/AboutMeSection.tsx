@@ -20,6 +20,8 @@ import ProfilePicture from "../../images/brick_wall_800px.jpg";
 
 const desktopBreakpoint = "lg";
 
+const leftPadding = 10;
+
 export const AboutMeSection: React.FC<{}> = () => {
   return (
     <Section
@@ -32,7 +34,7 @@ export const AboutMeSection: React.FC<{}> = () => {
         <Center mb={10} flexDirection={{ base: "column", md: "row" }}>
           <Heading
             fontSize={{ base: "5xl", md: "6xl", lg: "7xl" }}
-            color="dim-gray"
+            color="onyx"
             opacity={1}
             letterSpacing={{ base: 5, md: 8, lg: 12 }}
           >
@@ -53,7 +55,7 @@ export const AboutMeSection: React.FC<{}> = () => {
           </Stack>
           <Heading
             fontSize={{ base: "5xl", md: "6xl", lg: "7xl" }}
-            color="dim-gray"
+            color="onyx"
             opacity={1}
             letterSpacing={{ base: 5, lg: 12 }}
           >
@@ -70,9 +72,8 @@ export const AboutMeSection: React.FC<{}> = () => {
           fontSize="lg"
         >
           <Text mb={8} overflow="clip" fontSize="lg" textAlign="center">
-            I'm a french <Underlined>freelance</Underlined>{" "}
-            <Underlined>software engineer</Underlined> living in Berlin,
-            passionate about the web, technology and learning.
+            I'm a french <Underlined>freelance software engineer</Underlined>{" "}
+            living in Berlin, passionate about the web, technology and learning.
           </Text>
           <Center flexDirection="column">
             <Flex w="100%" alignItems="center" mb={2}>
@@ -122,44 +123,56 @@ export const AboutMeSection: React.FC<{}> = () => {
         pb={20}
         direction={{ base: "column", [desktopBreakpoint]: "row" }}
       >
-        <Heading mr={3} fontWeight={400} fontSize={{ base: "5xl", lg: "6xl" }}>
-          About Me
-        </Heading>
-        <Stack direction="column" fontWeight={300} fontSize="lg">
-          <Text>
-            Growing up in the South West of France, I quickly got hooked by the
-            web and started programming at 11. Later on, I graduated from{" "}
-            <Underlined fontWeight={600}>IMT</Underlined>{" "}
-            <Underlined fontWeight={600}>Atlantique</Underlined> with an
-            engineering degree in{" "}
-            <Underlined fontWeight={600}>mathematical</Underlined>{" "}
-            <Underlined fontWeight={600}>optimization</Underlined>, a field
-            leveraging applied mathematics, graph theory and algorithms to solve
-            NP-complete problems, particularly found in logistics.
-          </Text>
-          <Text>
-            I moved to Berlin in 2016 to work in startups and see the challenges
-            they face from the inside. I worked at{" "}
-            <Underlined fontWeight={600}>Kreatize</Underlined> and{" "}
-            <Underlined fontWeight={600}>Forto</Underlined> as software
-            engineer, where I learned a wide range of technologies and
-            methodologies.
-          </Text>
-          <Text>
-            In 2020 I started my self-employed journey and I now alternate
-            between working on personal projects and freelancing.
-          </Text>
+        <Stack>
+          <Heading
+            mr={3}
+            fontWeight={400}
+            fontSize={{ base: "5xl", lg: "6xl" }}
+          >
+            About Me
+          </Heading>
+          <Stack
+            direction="column"
+            fontWeight={300}
+            fontSize="lg"
+            pl={leftPadding}
+          >
+            <Text>
+              Growing up in the South West of France, I quickly got hooked by
+              the web and started programming at 11. Later on, I graduated from{" "}
+              <Underlined fontWeight={600}>IMT Atlantique</Underlined> with an
+              engineering degree in{" "}
+              <Underlined fontWeight={600}>
+                mathematical optimization
+              </Underlined>
+              , a field leveraging applied mathematics, graph theory and
+              algorithms to solve NP-complete problems, particularly found in
+              logistics.
+            </Text>
+            <Text>
+              I moved to Berlin in 2016 to work in startups and see the
+              challenges they face from the inside. I worked at{" "}
+              <Underlined fontWeight={600}>Kreatize</Underlined> and{" "}
+              <Underlined fontWeight={600}>Forto</Underlined> as software
+              engineer, where I learned a wide range of technologies and
+              methodologies.
+            </Text>
+            <Text>
+              In 2020 I started my self-employed journey and I now alternate
+              between working on personal projects and freelancing.
+            </Text>
 
-          <Text>
-            As a{" "}
-            <Underlined fontWeight={600}>
-              tech generalist and pragmatic problem solver
-            </Underlined>
-            , I focus on finding innovative solutions to real world problems by
-            combining diverse technologies and applying proven methodologies.
-          </Text>
+            <Text>
+              As a{" "}
+              <Underlined fontWeight={600}>
+                tech generalist and pragmatic problem solver
+              </Underlined>
+              , I focus on finding innovative solutions to real world problems
+              by combining diverse technologies and applying proven
+              methodologies.
+            </Text>
+          </Stack>
         </Stack>
-
         <Center
           pt={{ base: 10, [desktopBreakpoint]: 0 }}
           px={{ base: 0, [desktopBreakpoint]: 10 }}
@@ -186,7 +199,7 @@ const FreelanceServicesBlock: React.FC<{}> = ({}) => {
         px={3}
       >
         <Center flexDirection="column" color="white">
-          <Text fontWeight={800} textAlign="center" my={3}>
+          <Text fontWeight={800} textAlign="center" mt={3} pb={1}>
             Freelance services
           </Text>
           <Stack spacing={1} fontWeight={500} fontSize="sm" textAlign="center">
@@ -249,23 +262,25 @@ const testimonials: {
 export const TestimonialsBlock: React.FC<{}> = ({}) => {
   return (
     <Flex direction="column">
-      <Heading mb={4} fontWeight={400} fontSize={{ base: "4xl", lg: "5xl" }}>
+      <Heading mb={6} fontWeight={400} fontSize={{ base: "4xl", lg: "5xl" }}>
         Testimonials
       </Heading>
       <Flex
         direction={{ base: "column", [desktopBreakpoint]: "row" }}
-        py={6}
-        justifyContent="space-around"
-        alignItems="center"
+        pb={6}
+        pl={leftPadding}
+        justifyContent="space-between"
+        alignItems={{ base: "flex-start", [desktopBreakpoint]: "center" }}
         fontStyle="italic"
       >
         {testimonials.map((testimonial) => (
           <Stack
+            w={{ base: "100%", [desktopBreakpoint]: "47%" }}
             alignItems="flex-start"
             spacing={{ base: 2, [desktopBreakpoint]: 6 }}
             mb={{ base: 12, [desktopBreakpoint]: 0 }}
           >
-            <Text textAlign="justify" fontSize="sm" maxW="500px">
+            <Text textAlign="justify" fontSize="sm">
               "{testimonial.message}"
             </Text>
             <Text color="onyx">

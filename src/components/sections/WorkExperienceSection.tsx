@@ -118,8 +118,8 @@ const WorkExperienceBlock: React.FC<{ workExperience: WorkExperience }> = ({
   return (
     <Flex direction={{ base: "column", lg: "row" }} alignItems="stretch">
       <Flex
-        minW={{ lg: "300px" }}
-        maxW={{ lg: "300px" }}
+        minW={{ lg: "270px" }}
+        maxW={{ lg: "270px" }}
         direction="column"
         alignItems={{ base: "center", lg: "flex-end" }}
       >
