@@ -160,6 +160,14 @@ const skills: Skill[] = [
       'In a <span class="searchmatch">microservices</span> architecture, services are fine-grained and the protocols are lightweight.',
     seeMoreLink: "https://en.wikipedia.org/wiki/Microservices",
   },
+
+  {
+    name: "Docker",
+    size: 8,
+    popoverContent:
+      '<span class="searchmatch">Docker</span> is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.',
+    seeMoreLink: "https://en.wikipedia.org/wiki/Docker_(software)",
+  },
   {
     name: "AWS",
     size: 5,
