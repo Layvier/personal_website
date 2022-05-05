@@ -8,6 +8,8 @@ import {
   Link,
   Stack,
   Text,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/layout";
 import * as React from "react";
 import { Link as ScrollLink } from "react-scroll";
@@ -258,6 +260,14 @@ const testimonials: {
     companyUrl: "https://wonder.me/",
     message: `Working with Olivier was a pleasure. In the four months that he was with us, he integrated well into the team and the whole organization. He has a keen eye for the product and the users' concerns, and with his technical skills he made many valuable contributions to our codebase at an exciting time for our company. Last but certainly not least, Olivier is a very approachable and friendly person.`,
   },
+  {
+    from: "Stuard Johnson",
+    role: "CTO",
+    companyName: "Simple Construction Ltd",
+    companyUrl: "https://www.simpleconstruction.tech/",
+    message:
+      "Olivier is scrappy, startup-minded, efficient, talented, versatile, and very easy to work with. I'd hire him again in a heartbeat, and you should too.",
+  },
 ];
 export const TestimonialsBlock: React.FC<{}> = ({}) => {
   return (
@@ -265,45 +275,46 @@ export const TestimonialsBlock: React.FC<{}> = ({}) => {
       <Heading mb={6} fontWeight={400} fontSize={{ base: "4xl", lg: "5xl" }}>
         Testimonials
       </Heading>
-      <Flex
-        direction={{ base: "column", [desktopBreakpoint]: "row" }}
+      <Wrap
         pb={6}
         pl={leftPadding}
-        justifyContent="space-between"
+        justify="center"
+        spacing={16}
         alignItems={{ base: "flex-start", [desktopBreakpoint]: "center" }}
         fontStyle="italic"
       >
         {testimonials.map((testimonial) => (
-          <Stack
-            w={{ base: "100%", [desktopBreakpoint]: "47%" }}
-            alignItems="flex-start"
-            spacing={{ base: 2, [desktopBreakpoint]: 6 }}
-            mb={{ base: 12, [desktopBreakpoint]: 0 }}
-          >
-            <Text textAlign="justify" fontSize="sm">
-              "{testimonial.message}"
-            </Text>
-            <Text color="onyx">
-              <Text as="span" fontWeight={600}>
-                {testimonial.from}
+          <WrapItem maxW="400px">
+            <Stack
+              alignItems="flex-start"
+              spacing={{ base: 2, [desktopBreakpoint]: 6 }}
+              mb={{ base: 12, [desktopBreakpoint]: 0 }}
+            >
+              <Text textAlign="justify" fontSize="sm">
+                "{testimonial.message}"
               </Text>
-              ,{" "}
-              <Text as="span" fontWeight={600}>
-                {testimonial.role}
-              </Text>{" "}
-              at{" "}
-              <Link
-                fontWeight={600}
-                color="onyx"
-                href={testimonial.companyUrl}
-                isExternal
-              >
-                {testimonial.companyName}
-              </Link>
-            </Text>
-          </Stack>
+              <Text color="onyx">
+                <Text as="span" fontWeight={600}>
+                  {testimonial.from}
+                </Text>
+                ,{" "}
+                <Text as="span" fontWeight={600}>
+                  {testimonial.role}
+                </Text>{" "}
+                at{" "}
+                <Link
+                  fontWeight={600}
+                  color="onyx"
+                  href={testimonial.companyUrl}
+                  isExternal
+                >
+                  {testimonial.companyName}
+                </Link>
+              </Text>
+            </Stack>
+          </WrapItem>
         ))}
-      </Flex>
+      </Wrap>
     </Flex>
   );
 };
