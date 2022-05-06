@@ -261,7 +261,7 @@ const testimonials: {
     message: `Working with Olivier was a pleasure. In the four months that he was with us, he integrated well into the team and the whole organization. He has a keen eye for the product and the users' concerns, and with his technical skills he made many valuable contributions to our codebase at an exciting time for our company. Last but certainly not least, Olivier is a very approachable and friendly person.`,
   },
   {
-    from: "Stuard Johnson",
+    from: "Stuart Johnson",
     role: "CTO",
     companyName: "Simple Construction Ltd",
     companyUrl: "https://www.simpleconstruction.tech/",
