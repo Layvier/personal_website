@@ -42,8 +42,8 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop -p 8001",
+    "develop": "gatsby develop -p 8001",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

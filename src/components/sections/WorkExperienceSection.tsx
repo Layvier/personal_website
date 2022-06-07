@@ -24,6 +24,20 @@ interface WorkExperience {
 
 const workExperiences: WorkExperience[] = [
   {
+    companyName: "Simple Construction Ltd",
+    url: "https://www.simpleconstruction.tech/",
+    freelance: true,
+    jobTitle: "Freelance Software Engineer",
+    description:
+      "Freelancing contract for a London-based startup developing a software to manage construction projects",
+    bulletPoints: [
+      "Setup of a CI/CD pipeline and preview apps for a Firebase application",
+      "e2e and unit testing environment setup (Cypress, Jest, React Testing Library)",
+      "Implementation of e2e tests for critical flows of the product",
+    ],
+    dates: ["April 2022", "May 2022"],
+  },
+  {
     companyName: "Wonder",
     url: "https://wonder.me/",
     freelance: true,
