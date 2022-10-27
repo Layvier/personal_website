@@ -119,11 +119,25 @@ const skills: Skill[] = [
     seeMoreLink: "https://en.wikipedia.org/wiki/Operations%20research",
   },
   {
+    name: "Statistics/Probabilites",
+    size: 7,
+    popoverContent:
+      '<span class="searchmatch">Statistics</span> is the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data. In applying statistics to a scientific, industrial, or social problem, it is conventional to begin with a statistical population or a statistical model to be studied.',
+    seeMoreLink: "https://en.wikipedia.org/wiki/Statistics",
+  },
+  {
     name: "Graph Theory",
     size: 8,
     popoverContent:
       '<span class="searchmatch">Graph</span> <span class="searchmatch">theory</span> is the study of <span class="searchmatch">graphs</span>, which are mathematical structures used to model pairwise relations between objects.',
     seeMoreLink: "https://en.wikipedia.org/wiki/Graph%20theory",
+  },
+  {
+    name: "Deep Learning",
+    size: 7,
+    popoverContent:
+      '<span class="searchmatch">Deep learning</span> is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.',
+    seeMoreLink: "https://en.wikipedia.org/wiki/Deep_learning",
   },
   {
     name: "JavaScript",
