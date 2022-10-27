@@ -10,9 +10,13 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
 import * as React from "react";
 //@ts-ignore
 import SciMapWalkthroughVideo from "../../images/sci-map_walkthrough.webm";
+//@ts-ignore
+import SmartNotesWalkthroughVideo from "../../images/smartnotes_walkthrough.gif";
+
 import { SectionIds } from "../../pages/index";
 import { fonts } from "../../theme";
 import { Link } from "../Link";
@@ -39,13 +43,78 @@ export const ProjectsSection: React.FC<{}> = () => {
       <Stack spacing={28} mb={16}>
         <Project
           title={
-            <Heading>
-              <Link color="teal.500" href="https://sci-map.org" isExternal>
-                Sci-Map.org <ExternalLinkIcon boxSize={7} verticalAlign="top" />
-              </Link>{" "}
+            <Heading color="blue.500">
+              SmartNotes
               <Heading as="span" color="gray.500" fontSize="2xl">
                 - WIP
               </Heading>
+            </Heading>
+          }
+          renderTop={
+            <Flex direction="column" mt={6}>
+              <Center flexDirection="column">
+                <Box w="80%" maxW="800px" boxShadow="md" mb={16}>
+                  <Image src={SmartNotesWalkthroughVideo} />
+                </Box>
+              </Center>
+            </Flex>
+          }
+          subTitle={
+            <Text
+              maxW="100%"
+              fontSize="lg"
+              fontWeight={800}
+              color="sonic-silver"
+              mb={4}
+            >
+              The idea behind SmartNotes is to provide a tool transforming ideas
+              into composed text to boost productivity and even creativity. By
+              processing any contextual knowledge useful for the desired output,
+              SmartNotes aims to become the next iteration of text editors.
+            </Text>
+          }
+          description={
+            <>
+              <Text>
+                Using various NLP models from HuggingFace, GPT-3 and knowledge
+                graphs, SmartNotes understands what you want to write, identify
+                the relevant information and processes it to proide various
+                functionalities such as next phrase autocompletion,
+                notes-to-text, question generation, etc.
+              </Text>
+            </>
+          }
+          bulletPointsIconColor="almond"
+          bulletPoints={[
+            <Text as="span">
+              Checkout the code on{" "}
+              <Link
+                href="https://github.com/Layvier/smart-note-taking"
+                fontWeight={600}
+                isExternal
+              >
+                Github
+              </Link>
+            </Text>,
+            <Text as="span">
+              <Text fontWeight={600} as="span">
+                Tech stack:
+              </Text>{" "}
+              <Text as="span" fontWeight={300} fontSize="sm">
+                Python, Node.js, TypeScript, GraphQl, HuggingFace, NLTK, GPT-3
+              </Text>
+            </Text>,
+          ]}
+        />
+        <Project
+          title={
+            <Heading>
+              <Link color="teal.500" href="https://mapedia.org" isExternal>
+                Mapedia.org <ExternalLinkIcon boxSize={7} verticalAlign="top" />
+              </Link>{" "}
+              {/* <Heading as="span" color="gray.500" fontSize="2xl">
+                - WIP
+              </Heading> */}
             </Heading>
           }
           renderTop={
@@ -68,8 +137,8 @@ export const ProjectsSection: React.FC<{}> = () => {
               color="sonic-silver"
               mb={4}
             >
-              A non profit, collaborative learning map to explore knowledge
-              intuitively, and find the best learning materials.
+              A collaborative learning map to explore knowledge intuitively, and
+              find the best learning materials.
             </Text>
           }
           description={
@@ -91,7 +160,7 @@ export const ProjectsSection: React.FC<{}> = () => {
             <Text as="span">
               Learn more about it in the{" "}
               <Link
-                href="https://sci-map.org/about"
+                href="https://mapedia.org/about"
                 fontWeight={600}
                 isExternal
               >
@@ -101,7 +170,7 @@ export const ProjectsSection: React.FC<{}> = () => {
             <Text as="span">
               Checkout the code on{" "}
               <Link
-                href="http://github.com/sci-map-org/"
+                href="https://github.com/Mapedia-org/"
                 fontWeight={600}
                 isExternal
               >
