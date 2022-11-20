@@ -10,6 +10,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/bebas-neue": "^4.4.0",
+    "@fontsource/inter": "^4.5.14",
     "@fontsource/raleway": "^4.4.0",
     "@fontsource/spartan": "^4.4.0",
     "@react-icons/all-files": "^4.1.0",
