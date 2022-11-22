@@ -1,53 +1,78 @@
-import { extendTheme } from '@chakra-ui/react';
-import '@fontsource/spartan/400.css';
-import '@fontsource/spartan/500.css';
-import '@fontsource/spartan/600.css';
-import '@fontsource/spartan/700.css';
-import '@fontsource/spartan/800.css';
-import '@fontsource/raleway/300.css';
-import '@fontsource/raleway/400.css';
-import '@fontsource/raleway/600.css';
-import '@fontsource/raleway/800.css';
+import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/400.css";
 
 export const fonts = {
-  bebasNeue: 'Bebas Neue',
-  spartan: 'Spartan,Roboto,Open Sans',
-  raleway: 'Raleway,Avenir,Roboto,Open Sans',
+  inter: "Inter"
 };
 
 export const theme = extendTheme({
   colors: {
-    gray: {
-      50: '#FFFFFF',
-      100: '#F1F1F1',
-      150: '#E3E3E3',
-      200: '#D5D5D5',
-      250: '#C6C6C6',
-      300: '#B8B8B8',
-      350: '#AAAAAA',
-      400: '#9C9C9C',
-      450: '#8E8E8E',
-      500: '#808080',
-      550: '#717171',
-      600: '#636363',
-      650: '#555555',
-      700: '#474747',
-      750: '#393939',
-      800: '#2B2B2B',
-      850: '#1C1C1C',
-      900: '#0E0E0E',
-      950: '#000000',
-    },
-    // black: '#000000ff',
-    onyx: '#363946ff',
-    'dim-gray': '#696773ff',
-    'sonic-silver': '#777580ff',
-    almond: '#dac6b5ff',
-    'baby-blue-eyes': '#a4bef3ff',
-    opal: '#92b6b1ff',
+    white: "#ffffff",
+    black: "#141414",
+    violet: "#B07BF3",
+    yellow: "#F2EE8A",
+    "teal-darker": "#39D2B4",
+    "teal-light": "#91F9E5",
+    "teal-lighter": "#91F9E5D9",
   },
   fonts: {
-    heading: fonts.spartan,
-    body: fonts.raleway,
+    heading: fonts.inter,
+    body: fonts.inter,
   },
+  textStyles: {
+      h1: {
+        fontSize: ["68px", "108px"],
+        fontWeight: "700",
+        lineHeight: 1,
+        textTransform: "uppercase",
+      },
+      h2: {
+        fontSize: ["38px", "44px", "86px"],
+        fontWeight: "700",
+        lineHeight: 1,
+        textTransform: "uppercase",
+      },
+      h3: {
+        fontSize: ["24px", "28px", "55px"],
+        fontWeight: "700",
+        lineHeight: 1,
+        textTransform: "uppercase",
+      },
+      h4: {
+        fontSize: ["18px", "20px", "22.5px"],
+        fontWeight: "700",
+        textTransform: "uppercase",
+      },
+      h5: {
+        fontSize: ["14px", "16px", "18px"],
+        fontWeight: "700",
+      },
+      p1: {
+        fontWeight: "600",
+        fontSize: ["14px", "18px", "22.5px"],
+      },
+      p2: {
+        fontWeight: "400",
+        fontSize: ["14px", "16px", "18px"],
+      },
+      p3: {
+        fontWeight: "400",
+        fontSize: ["14px", "14.4px"],
+      },
+      p4: {
+        fontWeight: "400",
+        fontSize: ["12px", "12.4px"],
+      },
+      p5: {
+        fontWeight: "400",
+        fontSize: "10px"
+      }
+  },
+  breakpoints: {
+    sm: '48em',
+    md: '72em',
+    lg: '80em',
+    xl: '96em',
+  }
 });

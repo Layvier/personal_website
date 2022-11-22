@@ -1,46 +1,70 @@
-import { Center, Heading, Stack, Text } from '@chakra-ui/layout';
-import { SectionIds } from '../../pages';
-import { Section } from './Section';
-import * as React from 'react';
-import { Link } from '../Link';
-import { AiOutlineGithub } from '@react-icons/all-files/ai/AiOutlineGithub';
-import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin';
-import { AiOutlineTwitter } from '@react-icons/all-files/ai/AiOutlineTwitter';
-import Icon from '@chakra-ui/icon';
+import * as React from "react";
+import { Box, Text, VStack, HStack, Link, Flex } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
+import { Section } from "./Section";
+import { SectionIds } from "../../pages";
+import { StylizedBox } from "../StylizedBox";
+import QuoteIcon from "../../images/quote.svg";
+import Github from "../../images/Github.svg"
+import LinkedIn from "../../images/LinkedIn.svg"
+import Twitter from "../../images/Twitter.svg"
+
+interface SocialLink {
+  image: any,
+  href: string,
+}
+
+const email = "hi@olivierramier.xyz"
+
+const socialLinks: SocialLink[] = [
+  {
+    image: LinkedIn,
+    href: "#"
+  },
+  {
+    image: Github,
+    href: "#"
+  },
+  {
+    image: Twitter,
+    href: "#"
+  },
+]
 
 export const ContactSection: React.FC<{}> = () => {
   return (
-    <Section sectionId={SectionIds.contact} minH="300px" bgColor="gray.850">
-      <Center
-        w="100%"
-        flexGrow={1}
-        py={5}
-        color="gray.150"
-        fontWeight={800}
-        fontSize="lg"
-        letterSpacing={1}
-        flexDirection="column"
-      >
-        <Stack direction="row" alignItems="baseline" spacing={8}>
-          <Link href="mailto:hi@olivierramier.xyz" isExternal mt={4}>
-            <Heading color="baby-blue-eyes">hi@olivierramier.xyz</Heading>
-          </Link>
-        </Stack>
-        <Stack direction="row" spacing={12} mt={8}>
-          <Link color="almond" href="https://twitter.com/olivier_ramier" isExternal>
-            <Icon as={AiOutlineTwitter} boxSize={7} _hover={{ color: 'white' }} transition="color 200ms" />
-          </Link>
-          <Link color="almond" href="https://www.linkedin.com/in/olivier-ramier/" isExternal>
-            <Icon as={AiOutlineLinkedin} boxSize={7} _hover={{ color: 'white' }} transition="color 200ms" />
-          </Link>
-          <Link color="almond" href="https://github.com/Layvier" isExternal>
-            <Icon as={AiOutlineGithub} boxSize={7} _hover={{ color: 'white' }} transition="color 200ms" />
-          </Link>
-        </Stack>
-        <Text fontSize="sm" mt={16}>
-          © {new Date().getFullYear()} Olivier Ramier
+    <Section
+      sectionId={SectionIds.contact}
+      pl={0}
+      pr={0}
+      pt={["50px", "100px"]}
+      pb={["50px", "120px"]}
+    >
+        <Text
+          as="h2"
+          fontSize={["24px", "62px"]}
+          mb={["15px", "30px"]}
+          alignSelf="center"
+          fontWeight="700"
+          color="teal-light"
+        >
+          {email}
         </Text>
-      </Center>
+        <Flex gridGap={[4, 8]} justify="center" align="center">
+          {socialLinks.map(link => (
+            <Link href={link.href}>
+              <Image
+                src={link.image}
+                width={["40px", "60px"]}
+                transition="transform .15s ease"
+                _hover={{ transform: "scale(115%)" }}
+              />
+            </Link>
+          ))}
+        </Flex>
+        <Text alignSelf="center" as="h5" textStyle="h5" color="white" mt={12}>
+          © 2022 Olivier Ramier
+        </Text>
     </Section>
   );
 };
