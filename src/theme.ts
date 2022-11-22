@@ -67,6 +67,9 @@ export const theme = extendTheme({
       p5: {
         fontWeight: "400",
         fontSize: "10px"
+      },
+      skillTagHighlight: {
+        fontWeight: "700"
       }
   },
   breakpoints: {

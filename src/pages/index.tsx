@@ -38,6 +38,7 @@ const IndexPage = () => {
         textTransform="uppercase"
         textStyle="p2"
         zIndex="99"
+        display={["none", "flex", "flex"]}
       >
         <SectionLink sectionId={SectionIds.about} onScrollActive={sectionId => setActiveSection(sectionId)}>
           About me

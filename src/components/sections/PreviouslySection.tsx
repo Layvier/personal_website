@@ -45,6 +45,67 @@ const workPositions: WorkPosition[] = [
       "Tech stack: Typescript, React, Sass, WebRTC, WebSockets, Node.js",
     ]
   },
+  {
+    id: 2,
+    workplace: "Entrepreneur First",
+    isFreelance: false,
+    summary: {
+      position: "Cohort Member.",
+      description: "Joined Entrepreneur First Berlin's 5th cohort"
+    },
+    workDuration: "April 2020 - June 2020",
+    mainRoles: [
+      "Formed several teams following Entrepreneur First’s cofounder matching framework",
+      "Went through ideation, market research and customer development phases"
+    ]
+  },
+  {
+    id: 3,
+    workplace: "Forto",
+    isFreelance: false,
+    summary: {
+      position: "Software Engineer.",
+      description: "Backend software engineer (Node.js/Typescript) for a digital freight forwarder startup with event-driven microservice architecture"
+    },
+    workDuration: "Mar 2018  - Mar 2020",
+    mainRoles: [
+      "Designed and implemented core features for product demos, client side reporting and user management",
+      "Contributed to the hiring process, by interviewing and evaluating candidates",
+      "Coordinated a team of 3 people in charge of the customer facing platform",
+      "Designed and implemented an MVP for a distributed tracing system",
+      "Designed, implemented and maintained multiple micro-services related to the customer facing platform and rate management",
+    ]
+  },
+  {
+    id: 4,
+    workplace: "kreatize",
+    isFreelance: false,
+    summary: {
+      position: "Junior Software Engineer.",
+      description: "FullStack JavaScript development in a seed-level web start-up offering a SaaS solution to manufacturing companies"
+    },
+    workDuration: "Nov 2016  - Jan 2018",
+    mainRoles: [
+      "Migrated the platform from Laravel and JQuery to Hapi.js and Vue.js",
+      "Designed, implemented and maintained the company's public API",
+      "Designed and implemented development tooling for API testing",
+    ]
+  },
+  {
+    id: 5,
+    workplace: "PersEE",
+    isFreelance: false,
+    summary: {
+      position: "Junior Software Engineer.",
+      description: "FullStack JavaScript development in a seed-level web start-up offering a SaaS solution to manufacturing companies"
+    },
+    workDuration: "Mar 2016  - Nov 2016",
+    mainRoles: [
+      "Designed, implemented and maintained the company's public API",
+      "Designed, implemented, and maintained a model reducing the investment cost of a hydrogen supply chain up to 25%",
+      "Designed and implemented a Python service for real time hydrogen distribution optimization under uncertainty. Reduced operating costs by 10% and risks of shortages by 5%",
+    ]
+  },
 ]
 
 export const PreviouslySection: React.FC<{}> = () => {
@@ -62,7 +123,7 @@ export const PreviouslySection: React.FC<{}> = () => {
 
 const WorkPosition: React.FC<{ position: WorkPosition }> = ({ position }) => {
   return (
-    <Flex direction={["column", "column", "row"]} color="white" gridGap={[2, 2, 12]}>
+    <Flex direction={["column", "column", "row"]} color="white" gridGap={[2, 2, 12]} w="100%">
       <Box flexShrink={0} w={["100%", "100%", "30%"]}>
         <Text
           as="h3"
@@ -77,7 +138,7 @@ const WorkPosition: React.FC<{ position: WorkPosition }> = ({ position }) => {
           as="h4"
           textStyle="h4"
           color="teal-light"
-          mt={4}
+          mt={1}
           textAlign="end"
           display={["none", "none", "block"]}
         >

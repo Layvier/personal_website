@@ -21,7 +21,7 @@ interface Project {
   linkTags: React.ReactNode[]
 }
 
-const projects = [
+const projects: Project[] = [
   {
     id: 0,
     title: <>SmartNotes <Text as="span" color="violet">prototype</Text></>,
@@ -39,7 +39,7 @@ const projects = [
     title: <>mAPEDIA<Text as="span" color="teal-darker">.org</Text></>,
     accentColor: 'teal-darker',
     summary: <>A collaborative learning map to explore knowledge intuitively, and find the best learning materials.</>,
-    details: <>Having learned a lot online, in a self directed way, I always thought that something was missing to help find our way through this ocean of information.<br />With this project, my goal is to improve the way people learn online and create a new way to consume knowledge by leveraging the collective intelligence..</>,
+    details: <>Having learned a lot online, in a self directed way, I always thought that something was missing to help find our way through this ocean of information.<br /><br />With this project, my goal is to improve the way people learn online and create a new way to consume knowledge by leveraging the collective intelligence..</>,
     image: SmartnotesWalkthroughGif,
     techStackTag: 'Node.js, TypeScript, Neo4j, Next.js, React, Apollo server/client, Chakra UI',
     linkTags: [
@@ -51,7 +51,7 @@ const projects = [
     id: 2,
     title: <>Ant Colony Optimization <Text as="span" color="violet">algorithm</Text></>,
     accentColor: 'violet',
-    details: <>“Ant colony” is a fascinating optimization algorithm inspired by how ants find the shortest path between food sources and their colony.<br />I decided to leverage Elixir’s actor model to simulate ants in their own processes and solve the famous <Link href="#" color="violet" fontWeight="600">Travelling Salesman Problem (TSP)</Link>. This approach makes the algorithm extremely scalable as it is then able to run on thousands of processors at the same time.</>,
+    details: <>“Ant colony” is a fascinating optimization algorithm inspired by how ants find the shortest path between food sources and their colony.<br /><br />I decided to leverage Elixir’s actor model to simulate ants in their own processes and solve the famous <Link href="#" color="violet" fontWeight="600">Travelling Salesman Problem (TSP)</Link>. This approach makes the algorithm extremely scalable as it is then able to run on thousands of processors at the same time.</>,
     techStackTag: 'Python, Node.js, TypeScript, GraphQl, HuggingFace, NLTK, GPT-3',
     linkTags: [
       <>Checkout the code on <Link href="#" color="violet">Github</Link></>
