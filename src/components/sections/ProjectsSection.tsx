@@ -137,7 +137,7 @@ const TechStackTag: React.FC<{
       py={[2, 4]}
     >
       <Flex align="start">
-        <Image src={Circle} mt={1.5} mr={2} />
+        <Image src={Circle} w={["8px", "12px"]} mt={1.5} mr={2} />
         <Box>
           <Text as="h5" textStyle="h5" textTransform="uppercase" mb={1}>Tech Stack</Text>
           <Text as="p" textStyle="p2">{text}</Text>

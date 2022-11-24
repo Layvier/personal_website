@@ -269,13 +269,13 @@ const SkillTag: React.FC<{ skill: Skill }> = ({ skill }) => {
         <Box
           tabIndex={0}
           role='button'
-          px={4}
-          py={2}
+          px={[3, 4]}
+          py={[1, 2]}
           bg="white"
-          borderWidth="3px"
+          borderWidth={["2px", "3px"]}
           borderColor="black"
           children={
-            <Text as="h4" fontWeight="700" fontSize={["14px", "23px"]}>{skill.name}</Text>
+            <Text as="h4" fontWeight="700" fontSize={["12px", "23px"]}>{skill.name}</Text>
           }
           transition="all ease .2s"
           _hover={{ backgroundColor: "black", color: "white", borderColor: "teal-light" }}

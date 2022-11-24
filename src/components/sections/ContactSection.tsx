@@ -55,7 +55,7 @@ export const ContactSection: React.FC<{}> = () => {
             <Link href={link.href}>
               <Image
                 src={link.image}
-                width={["40px", "60px"]}
+                width={["24px", "44px"]}
                 transition="transform .15s ease"
                 _hover={{ transform: "scale(115%)" }}
               />

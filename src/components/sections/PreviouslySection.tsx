@@ -111,7 +111,7 @@ const workPositions: WorkPosition[] = [
 export const PreviouslySection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.previously} pt="120px" pb="160px">
-      <Text color="white" as="h2" textStyle="h2" mb={[8, 16]}>Previously</Text>
+      <Text color="white" as="h2" textStyle="h2" mb={[10, 12, 20]}>Previously</Text>
       <VStack spacing={24} w="100%">
         {workPositions.map(position => (
           <WorkPosition key={position.id} position={position} />
@@ -130,6 +130,7 @@ const WorkPosition: React.FC<{ position: WorkPosition }> = ({ position }) => {
           fontSize={["24px", "36px"]}
           textTransform="uppercase"
           fontWeight="600"
+          lineHeight={1.25}
           textAlign={["start", "start", "end"]}
         >
           {position.workplace}
@@ -151,7 +152,7 @@ const WorkPosition: React.FC<{ position: WorkPosition }> = ({ position }) => {
           <Text as="span" color="violet">{position.summary.position} </Text> 
           {position.summary.description}
         </Text>
-        <VStack spacing={2} align="start">
+        <VStack ml={6} spacing={2} align="start">
           {position.mainRoles.map((role, index) => (
             <MainRole role={role} key={index} />
           ))}

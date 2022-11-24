@@ -39,8 +39,8 @@ const testimonialsData: Testimonial[] = [
 export const TestimonialsSection: React.FC<{}> = () => {
   return (
     <Section sectionId={SectionIds.testimonials}>
-      <Text color="white" as="h2" textStyle="h2" mb={8}>Testimonials</Text>
-      <VStack spacing={8} pb={[20, 40]} align="stretch">
+      <Text color="white" as="h2" textStyle="h2" mb={[10, 12, 16]}>Testimonials</Text>
+      <VStack spacing={["40px", "60px"]} pb={[20, 40]} align="stretch">
         {testimonialsData.map(testimonial => (
           <Testimonial key={testimonial.id} testimonial={testimonial} />
         ))}
