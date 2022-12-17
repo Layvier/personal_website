@@ -6,11 +6,12 @@ import { HeroSection } from "../components/sections/HeroSection";
 import { AboutMeSection } from "../components/sections/AboutMeSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { ProjectsSection } from "../components/sections/ProjectsSection";
-import { PreviouslySection } from "../components/sections/PreviouslySection"
+import { PreviouslySection } from "../components/sections/PreviouslySection";
 import { SkillsSection } from "../components/sections/SkillsSection";
 import { ContactSection } from "../components/sections/ContactSection";
 import { SectionLink } from "../components/sections/SectionLink";
-import BlackBackground from "../../public/images/black-bg.png";
+// @ts-ignore
+import BlackBackground from "../images/black-bg.png";
 
 export enum SectionIds {
   "hero" = "hero",
@@ -23,47 +24,76 @@ export enum SectionIds {
 }
 
 const IndexPage = () => {
-  const [activeSection, setActiveSection] = React.useState<SectionIds>(SectionIds.hero);
-
+  const [_activeSection, setActiveSection] = React.useState<SectionIds>(
+    SectionIds.hero
+  );
   return (
     <Layout>
       <Seo title="Olivier Ramier" />
       <Box
-        w="100%"
+        position="fixed"
         color="white"
-        mixBlendMode="difference"
-        position="sticky"
-        mt={[0, "-135px"]}
-        top={[0, "65px", "80px"]}
+        display={["none", "initial"]}
+        top={12}
+        right={10}
+        mixBlendMode={
+          _activeSection === SectionIds.hero ? "normal" : "difference"
+        }
+        transition="color 200ms"
+        w="160px"
+        zIndex="99"
       >
-        <Box maxW="2000px" margin="auto" display="flex" justifyContent="end">
-          <Stack
-            minW="150px"
-            mr="60px"
-            spacing={0}
-            textTransform="uppercase"
-            textStyle="p2"
-            zIndex="99"
-            display={["none", "flex", "flex"]}
-            right="0"
+        <Stack
+          minW="350px"
+          spacing={0}
+          textTransform="uppercase"
+          textStyle="p2"
+          display={["none", "flex"]}
+        >
+          <SectionLink
+            sectionId={SectionIds.hero}
+            hidden={true}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
           >
-            <SectionLink sectionId={SectionIds.about} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              About me
-            </SectionLink>
-            <SectionLink sectionId={SectionIds.testimonials} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              Testimonials
-            </SectionLink>
-            <SectionLink sectionId={SectionIds.projects} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              Projects
-            </SectionLink>
-            <SectionLink sectionId={SectionIds.previously} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              Previously
-            </SectionLink>
-            <SectionLink sectionId={SectionIds.skills} onScrollActive={sectionId => setActiveSection(sectionId)}>
-              Skills
-            </SectionLink>
-          </Stack>
-        </Box>
+            Hero
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.about}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            About me
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.testimonials}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            Testimonials
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.projects}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            Projects
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.previously}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            Previously
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.skills}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            Skills
+          </SectionLink>
+          <SectionLink
+            sectionId={SectionIds.contact}
+            onScrollActive={(sectionId) => setActiveSection(sectionId)}
+          >
+            Contact
+          </SectionLink>
+        </Stack>
       </Box>
       <Box bgImage={BlackBackground} bgSize="cover">
         <HeroSection />

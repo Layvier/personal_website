@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import { Center, Flex } from '@chakra-ui/layout';
-import { graphql, useStaticQuery } from 'gatsby';
-import * as React from 'react';
-import '../main.css';
+import { Center, Flex } from "@chakra-ui/layout";
+import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
+import "../main.css";
 
 export const Layout: React.FC<{}> = ({ children }) => {
   const data = useStaticQuery(graphql`

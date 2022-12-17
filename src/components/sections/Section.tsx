@@ -1,7 +1,9 @@
 import * as React from "react";
 import { Flex, FlexProps } from "@chakra-ui/layout";
 
-export const Section: React.FC<{ sectionId: string, fullHeight?: boolean } & FlexProps> = ({
+export const Section: React.FC<
+  { sectionId: string; fullHeight?: boolean } & FlexProps
+> = ({
   sectionId,
   fullHeight,
 
@@ -18,7 +20,7 @@ export const Section: React.FC<{ sectionId: string, fullHeight?: boolean } & Fle
       pl={["22px", "81px"]}
       pr={["22px", "235px"]}
       pt="75px"
-      pb="75px"
+      pb={["80px", "160px"]}
       {...flexProps}
     >
       {children}

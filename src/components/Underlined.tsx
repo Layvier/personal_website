@@ -4,7 +4,7 @@ import * as React from "react";
 export const Underlined: React.FC<{
   fontWeight?: number;
   children: string;
-}> = ({ children, fontWeight = 700 }) => {
+}> = ({ children, fontWeight = 600 }) => {
   return (
     <>
       {children

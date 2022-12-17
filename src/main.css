@@ -3,7 +3,7 @@
 }
 
 .underlined::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -3px;
@@ -22,4 +22,8 @@
 
 .searchmatch {
   font-weight: 800;
+}
+
+html {
+  background-color: black;
 }
