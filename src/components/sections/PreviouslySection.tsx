@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Text, Flex, VStack } from "@chakra-ui/layout";
+import { Box, Text, Flex, VStack, Link } from "@chakra-ui/layout";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
 import { Section } from "./Section";
@@ -8,6 +8,7 @@ import { SectionIds } from "../../pages";
 interface WorkPosition {
   id: number;
   workplace: string;
+  url: string;
   isFreelance: boolean;
   summary: { position: string; description: string };
   workDuration: string;
@@ -18,6 +19,7 @@ const workPositions: WorkPosition[] = [
   {
     id: 0,
     workplace: "Simple Construction Ltd",
+    url: "https://www.simpleconstruction.tech/",
     isFreelance: true,
     summary: {
       position: "Software Engineer",
@@ -35,6 +37,7 @@ const workPositions: WorkPosition[] = [
     id: 1,
     workplace: "Wonder",
     isFreelance: true,
+    url: "https://wonder.me/",
     summary: {
       position: "Fullstack Engineer",
       description:
@@ -50,6 +53,7 @@ const workPositions: WorkPosition[] = [
   {
     id: 2,
     workplace: "Entrepreneur First",
+    url: "https://www.joinef.com/",
     isFreelance: false,
     summary: {
       position: "Cohort Member.",
@@ -65,6 +69,7 @@ const workPositions: WorkPosition[] = [
     id: 3,
     workplace: "Forto",
     isFreelance: false,
+    url: "https://forto.com/",
     summary: {
       position: "Software Engineer.",
       description:
@@ -82,6 +87,7 @@ const workPositions: WorkPosition[] = [
   {
     id: 4,
     workplace: "kreatize",
+    url: "https://kreatize.com/",
     isFreelance: false,
     summary: {
       position: "Junior Software Engineer.",
@@ -99,6 +105,7 @@ const workPositions: WorkPosition[] = [
     id: 5,
     workplace: "PersEE",
     isFreelance: false,
+    url: "https://pers-ee.com/#/",
     summary: {
       position: "Junior Software Engineer.",
       description:
@@ -137,16 +144,31 @@ const WorkPosition: React.FC<{ position: WorkPosition }> = ({ position }) => {
       w="100%"
     >
       <Box flexShrink={0} w={["100%", "100%", "30%"]}>
-        <Text
-          as="h3"
-          fontSize={["24px", "36px"]}
-          textTransform="uppercase"
-          fontWeight="600"
-          lineHeight={1.25}
-          textAlign={["start", "start", "end"]}
-        >
-          {position.workplace}
-        </Text>
+        {!position.url ? (
+          <Text
+            as="h3"
+            fontSize={["24px", "36px"]}
+            textTransform="uppercase"
+            fontWeight="600"
+            lineHeight={1.25}
+            textAlign={["start", "start", "end"]}
+          >
+            {position.workplace}
+          </Text>
+        ) : (
+          <Link href={position.url} isExternal>
+            <Text
+              as="h3"
+              fontSize={["24px", "36px"]}
+              textTransform="uppercase"
+              fontWeight="600"
+              lineHeight={1.25}
+              textAlign={["start", "start", "end"]}
+            >
+              {position.workplace}
+            </Text>
+          </Link>
+        )}
         <Text
           as="h4"
           textStyle="h4"

@@ -4,6 +4,7 @@ import { Section } from "./Section";
 import { SectionIds } from "../../pages";
 import GreenThing from "../../images/green-thing.svg";
 import GreenThingMobile from "../../images/green-thing-mobile.svg";
+import { Link as ScrollLink } from "react-scroll";
 
 export const HeroSection: React.FC<{}> = () => {
   return (
@@ -30,7 +31,15 @@ export const HeroSection: React.FC<{}> = () => {
           </Text>
           <Text color="white" as="h4">
             Building Stuff (Checkout{" "}
-            <Link color="teal-lighter" href="#">
+            <Link
+              as={ScrollLink}
+              color="teal-lighter"
+              activeClass="active_section_link"
+              to={SectionIds.projects}
+              spy={true}
+              smooth={true}
+              duration={600}
+            >
               Mapedia
             </Link>
             )

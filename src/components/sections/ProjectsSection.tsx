@@ -8,6 +8,7 @@ import { SectionIds } from "../../pages";
 import { StylizedBox } from "../StylizedBox";
 import PurpleThing from "../../images/purple-thing-2.svg";
 import SmartnotesWalkthroughGif from "../../images/smartnotes_walkthrough.gif";
+import MapediaWalkthroughGif from "../../images/sci-map_walkthrough.gif";
 import Circle from "../../images/circle.svg";
 
 interface Project {
@@ -22,6 +23,58 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 1,
+    title: (
+      <>
+        mAPEDIA
+        <Text as="span" color="teal-darker">
+          .org
+        </Text>
+      </>
+    ),
+    accentColor: "teal-darker",
+    summary: (
+      <>
+        A collaborative learning map to explore knowledge intuitively, and find
+        the best learning materials.
+      </>
+    ),
+    details: (
+      <>
+        Having learned a lot online, in a self directed way, I always thought
+        that something was missing to help find our way through this ocean of
+        information.
+        <br />
+        <br />
+        With this project, my goal is to improve the way people learn online and
+        create a new way to consume knowledge by leveraging the collective
+        intelligence..
+      </>
+    ),
+    image: MapediaWalkthroughGif,
+    techStackTag:
+      "Node.js, TypeScript, Neo4j, Next.js, React, Apollo server/client, Chakra UI",
+    linkTags: [
+      <>
+        Learn more about it in the{" "}
+        <Link href="https://mapedia.org/about" color="teal-darker" isExternal>
+          About
+        </Link>{" "}
+        section
+      </>,
+      <>
+        Checkout the code on{" "}
+        <Link
+          href="https://github.com/Mapedia-org"
+          color="teal-darker"
+          isExternal
+        >
+          Github
+        </Link>
+      </>,
+    ],
+  },
   {
     id: 0,
     title: (
@@ -54,55 +107,11 @@ const projects: Project[] = [
     linkTags: [
       <>
         Checkout the code on{" "}
-        <Link href="#" color="violet">
-          Github
-        </Link>
-      </>,
-    ],
-  },
-  {
-    id: 1,
-    title: (
-      <>
-        mAPEDIA
-        <Text as="span" color="teal-darker">
-          .org
-        </Text>
-      </>
-    ),
-    accentColor: "teal-darker",
-    summary: (
-      <>
-        A collaborative learning map to explore knowledge intuitively, and find
-        the best learning materials.
-      </>
-    ),
-    details: (
-      <>
-        Having learned a lot online, in a self directed way, I always thought
-        that something was missing to help find our way through this ocean of
-        information.
-        <br />
-        <br />
-        With this project, my goal is to improve the way people learn online and
-        create a new way to consume knowledge by leveraging the collective
-        intelligence..
-      </>
-    ),
-    image: SmartnotesWalkthroughGif,
-    techStackTag:
-      "Node.js, TypeScript, Neo4j, Next.js, React, Apollo server/client, Chakra UI",
-    linkTags: [
-      <>
-        Learn more about it in the{" "}
-        <Link href="#" color="teal-darker">
-          About
-        </Link>{" "}
-        section
-      </>,
-      <>
-        Checkout the code on{" "}
-        <Link href="#" color="teal-darker">
+        <Link
+          href="https://github.com/Layvier/smart-note-taking"
+          color="violet"
+          isExternal
+        >
           Github
         </Link>
       </>,
@@ -126,7 +135,12 @@ const projects: Project[] = [
         <br />
         <br />I decided to leverage Elixir’s actor model to simulate ants in
         their own processes and solve the famous{" "}
-        <Link href="#" color="violet" fontWeight="600">
+        <Link
+          href="https://en.wikipedia.org/wiki/Travelling_salesman_problem"
+          color="violet"
+          fontWeight="600"
+          isExternal
+        >
           Travelling Salesman Problem (TSP)
         </Link>
         . This approach makes the algorithm extremely scalable as it is then
@@ -138,7 +152,11 @@ const projects: Project[] = [
     linkTags: [
       <>
         Checkout the code on{" "}
-        <Link href="#" color="violet">
+        <Link
+          href="https://github.com/Layvier/ant-colony-elixir"
+          color="violet"
+          isExternal
+        >
           Github
         </Link>
       </>,

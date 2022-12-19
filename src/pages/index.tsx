@@ -1,22 +1,20 @@
-import * as React from "react";
 import { Box, Stack } from "@chakra-ui/layout";
+import * as React from "react";
 import { Layout } from "../components/layout";
-import { Seo } from "../components/seo";
-import { HeroSection } from "../components/sections/HeroSection";
 import { AboutMeSection } from "../components/sections/AboutMeSection";
-import { TestimonialsSection } from "../components/sections/TestimonialsSection";
-import { ProjectsSection } from "../components/sections/ProjectsSection";
-import { PreviouslySection } from "../components/sections/PreviouslySection";
-import { SkillsSection } from "../components/sections/SkillsSection";
 import { ContactSection } from "../components/sections/ContactSection";
+import { HeroSection } from "../components/sections/HeroSection";
+import { PreviouslySection } from "../components/sections/PreviouslySection";
+import { ProjectsSection } from "../components/sections/ProjectsSection";
 import { SectionLink } from "../components/sections/SectionLink";
+import { SkillsSection } from "../components/sections/SkillsSection";
+import { Seo } from "../components/seo";
 // @ts-ignore
 import BlackBackground from "../images/black-bg.png";
 
 export enum SectionIds {
   "hero" = "hero",
   "about" = "about",
-  "testimonials" = "testimonials",
   "projects" = "projects",
   "previously" = "previously",
   "skills" = "skills",
@@ -64,12 +62,6 @@ const IndexPage = () => {
             About me
           </SectionLink>
           <SectionLink
-            sectionId={SectionIds.testimonials}
-            onScrollActive={(sectionId) => setActiveSection(sectionId)}
-          >
-            Testimonials
-          </SectionLink>
-          <SectionLink
             sectionId={SectionIds.projects}
             onScrollActive={(sectionId) => setActiveSection(sectionId)}
           >
@@ -98,7 +90,6 @@ const IndexPage = () => {
       <Box bgImage={BlackBackground} bgSize="cover">
         <HeroSection />
         <AboutMeSection />
-        <TestimonialsSection />
       </Box>
       <ProjectsSection />
       <Box bgImage={BlackBackground} bgSize="cover">
