@@ -101,7 +101,7 @@ const AboutMeBox: React.FC<{}> = () => {
             Favorite Stack
           </Text>
           <VStack spacing="6px" textStyle="p3">
-            <Text as="p">Typescript - Node.js - GraphQl - React - Python</Text>
+            <Text as="p">Typescript - Node.js - GraphQl - React</Text>
           </VStack>
         </VStack>
       </StylizedBox>
