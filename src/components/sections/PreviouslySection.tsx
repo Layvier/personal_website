@@ -107,13 +107,12 @@ const workPositions: WorkPosition[] = [
     isFreelance: false,
     url: "https://pers-ee.com/#/",
     summary: {
-      position: "Junior Software Engineer.",
+      position: "Optimization Developer",
       description:
-        "FullStack JavaScript development in a seed-level web start-up offering a SaaS solution to manufacturing companies",
+        "Optimization development (applied mathematics) in a deeptech start-up providing digital decision tools for hydrogen supply chains",
     },
     workDuration: "Mar 2016  - Nov 2016",
     mainRoles: [
-      "Designed, implemented and maintained the company's public API",
       "Designed, implemented, and maintained a model reducing the investment cost of a hydrogen supply chain up to 25%",
       "Designed and implemented a Python service for real time hydrogen distribution optimization under uncertainty. Reduced operating costs by 10% and risks of shortages by 5%",
     ],
