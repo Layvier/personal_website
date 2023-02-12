@@ -468,20 +468,6 @@ const skills: Skill[] = [
     seeMoreLink: "https://en.wikipedia.org/wiki/User%20experience%20design",
   },
   {
-    name: "Figma",
-    popoverContent: (
-      <>
-        <Text as="span" textStyle="skillTagHighlight">
-          Figma
-        </Text>{" "}
-        is a vector graphics editor and prototyping tool which is primarily
-        web-based, with additional offline features enabled by desktop
-        applications for macOS and Windows.
-      </>
-    ),
-    seeMoreLink: "https://en.wikipedia.org/wiki/Figma%20(software)",
-  },
-  {
     name: "Elixir",
     popoverContent: (
       <>
@@ -494,19 +480,6 @@ const skills: Skill[] = [
       </>
     ),
     seeMoreLink: "https://elixir-lang.org/",
-  },
-  {
-    name: "Vue.js",
-    popoverContent: (
-      <>
-        <Text as="span" textStyle="skillTagHighlight">
-          Vue.js
-        </Text>{" "}
-        is an open-source model–view–viewmodel front end JavaScript framework
-        for building user interfaces and single-page applications.
-      </>
-    ),
-    seeMoreLink: "https://en.wikipedia.org/wiki/Vue.js",
   },
   {
     name: "Chakra UI",
@@ -522,7 +495,7 @@ const skills: Skill[] = [
     seeMoreLink: "https://chakra-ui.com/",
   },
   {
-    name: "HTML",
+    name: "HTML/CSS",
     popoverContent: (
       <>
         The{" "}
@@ -539,44 +512,6 @@ const skills: Skill[] = [
       </>
     ),
     seeMoreLink: "https://en.wikipedia.org/wiki/HTML",
-  },
-  {
-    name: "CSS",
-    popoverContent: (
-      <>
-        <Text as="span" textStyle="skillTagHighlight">
-          Cascading Style Sheets
-        </Text>{" "}
-        (
-        <Text as="span" textStyle="skillTagHighlight">
-          CSS
-        </Text>
-        ) is a style sheet language used for describing the presentation of a
-        document written in a markup language such as{" "}
-        <Text as="span" textStyle="skillTagHighlight">
-          HTML
-        </Text>
-        .{" "}
-        <Text as="span" textStyle="skillTagHighlight">
-          CSS
-        </Text>{" "}
-        is a cornerstone
-      </>
-    ),
-    seeMoreLink: "https://en.wikipedia.org/wiki/CSS",
-  },
-  {
-    name: "Sass",
-    popoverContent: (
-      <>
-        <Text as="span" textStyle="skillTagHighlight">
-          Sass
-        </Text>{" "}
-        is a preprocessor scripting language that is interpreted or compiled
-        into Cascading Style Sheets.
-      </>
-    ),
-    seeMoreLink: "https://sass-lang.com/",
   },
 ];
 
